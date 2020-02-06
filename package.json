@@ -1,0 +1,45 @@
+{
+	"name": "gulp_wordpress_config",
+	"version": "2.1.0",
+	"description": "An optimised gulp configuration for WordPress website developpement",
+	"main": "gulpfile.js",
+	"dependencies": {
+		"browser-sync": "^2.26.7",
+		"del": "^5.1.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-cache": "^1.1.3",
+		"gulp-clean": "^0.4.0",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-cli": "^2.2.0",
+		"gulp-imagemin": "^6.1.1",
+		"gulp-sass": "^4.0.2",
+		"gulp-sass-glob": "^1.1.0",
+		"gulp-uglify": "^3.0.2",
+		"imagemin-jpegoptim": "^6.0.0",
+		"imagemin-mozjpeg": "^8.0.0",
+		"npm": "^6.13.7"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrZyr0/MyGulpFile.git"
+	},
+	"keywords": [
+		"gulp",
+		"automation",
+		"dev",
+		"sass",
+		"script",
+		"js",
+		"font",
+		"img",
+		"optimized",
+		"WordPress"
+	],
+	"author": "Julien SEIXAS (Zyr0)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MrZyr0/MyGulpFile/issues"
+	},
+	"homepage": "https://github.com/MrZyr0/MyGulpFile#readme"
+}

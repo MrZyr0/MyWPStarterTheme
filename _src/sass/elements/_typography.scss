@@ -1,0 +1,49 @@
+// Typographical style applied to the elements
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	line-height: $font__line-height-body;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-family: $font__heading;
+}
+
+h1
+{
+	text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.63);
+}
+
+h1, h2
+{
+	font-size: 2em;
+	color: white;
+}
+
+h3, h4
+{
+	font-size: 1.5em;
+}
+
+h4
+{
+	font-weight: 500;
+}
+
+h5, h6
+{
+	font-size: 1em;
+}
+
+p
+{
+	font-size: 10px;
+}

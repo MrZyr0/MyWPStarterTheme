@@ -1,0 +1,54 @@
+/*!
+Theme Name: MyWPStarterTheme
+Theme URI: https: //github.com/MrZyr0/MyWPStarterTheme
+Author: Julien SEIXAS (Zyr0)
+Author URI: https://jseixas.me
+Description: A WordPress theme starter humbly light, complete, clear and more secure as possible
+Version: 1.0.0
+License: Mozilla Public License, v. 2.0.
+License URI: https: //github.com/MrZyr0/MyWPStarterTheme/blob/master/LICENSE.md
+Text Domain: MyWPStarterTheme
+Tags: custom-background, custom-logo, custom-menu, featured-images, responsive
+
+MyWPStarterTheme is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import 'variables-site/colors';
+@import 'variables-site/typography';
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import 'modules/normalize';
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import 'modules/accessibility';
+
+/**
+**	WordPress CORE Fonctionnalities
+*/
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import 'modules/alignments';
+
+/**
+**	Custom Style
+*/
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import 'elements/*';
+
+/*--------------------------------------------------------------
+# Template file specific style
+--------------------------------------------------------------*/
+@import 'templates/*';
