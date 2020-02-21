@@ -155,7 +155,7 @@ add_action('admin_enqueue_scripts', 'admin_style');
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/modules/customizer.php';
+require get_template_directory() . '/modules-php/customizer.php';
 
 
 

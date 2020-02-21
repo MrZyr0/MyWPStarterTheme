@@ -14,41 +14,10 @@ MyWPStarterTheme is based on Underscores https://underscores.me/, (C) 2012-2017 
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
-@import 'variables-site/colors';
-@import 'variables-site/typography';
+@import 'variables-style/*';
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import 'modules/normalize';
+@import 'modules-style/*';
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import 'modules/accessibility';
+@import 'elements-style/*';
 
-/**
-**	WordPress CORE Fonctionnalities
-*/
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import 'modules/alignments';
-
-/**
-**	Custom Style
-*/
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import 'elements/*';
-
-/*--------------------------------------------------------------
-# Template file specific style
---------------------------------------------------------------*/
-@import 'templates/*';
+@import 'templates-style/*';

@@ -10,10 +10,9 @@
  */
 
 $is_localhost = ( $_SERVER['REMOTE_ADDR'] == "127.0.0.1" or $_SERVER['REMOTE_ADDR'] == "::1" );
-if ($is_localhost) :
+if ($is_localhost) :?>
 	<!-- header template : header.php - START -->
-endif;
-?>
+<?php endif; ?>
 
 
 <!DOCTYPE html>
