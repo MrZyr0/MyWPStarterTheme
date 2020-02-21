@@ -1,17 +1,54 @@
+<!-- markdownlint-disable MD012 MD022 MD024 -->
 # MyWPStarterTheme
+
+- [MyWPStarterTheme](#mywpstartertheme)
+  - [Introduction](#introduction)
+  - [Includes](#includes)
+  - [Usage](#usage)
+    - [Commandes](#commandes)
+      - [`npx gulp`](#npx-gulp)
+      - [`npx gulp build`](#npx-gulp-build)
+      - [`npx gulp clean`](#npx-gulp-clean)
+  - [Installation](#installation)
+  - [Project architecture](#project-architecture)
+  - [Roadmap](#roadmap)
+  - [Cool tools](#cool-tools)
+    - [Content](#content)
+    - [Development](#development)
+    - [Security](#security)
+    - [Search Engine Optimization (SEO)](#search-engine-optimization-seo)
+    - [Performance optimizations](#performance-optimizations)
+    - [Tools](#tools)
+    - [Need testing](#need-testing)
+  - [Technology Watch](#technology-watch)
+    - [Repositories](#repositories)
+    - [Tutorials / Articles](#tutorials--articles)
+    - [Blogs](#blogs)
+    - [Tools](#tools-1)
+    - [Legal informations](#legal-informations)
+    - [Other](#other)
+
+
+&nbsp; <!-- break line -->
+
+
+## Introduction
 
 My WordPress theme starter humbly light, complete, clear and more secure as possible.
 
+
 &nbsp; <!-- break line -->
-&nbsp; <!-- break line -->
+
 
 ## Includes
 
-This project is base on [underscores](https://underscores.me/) alias [\_s](https://github.com/automattic/_s) on github.
+This project is base on [underscores](https://underscores.me/) alias [\_s](https://github.com/automattic/_s) on GitHub, made by [Automattic](https://github.com/automattic/).
 
 This project include [my own gulp file](https://github.com/MrZyr0/MyGulpFile) adapted for WordPress theme developement.
 
+
 &nbsp; <!-- break line -->
+
 
 ## Usage
 
@@ -24,7 +61,7 @@ All you need to edit is in `_src/` folder.
 When developing, use browser sync to speed up your productivity.
 It'll compile the scss, prefixes it, quickly optimize images, minify scripts and copy PHP files to the good folder.
 
-#### `npxgulp build`
+#### `npx gulp build`
 
 Optimize your project before upload it !
 It'll compile the scss, prefixes it, better optimize images (with an acceptable lossy compression), minify scripts and copy PHP files to the good folder.
@@ -36,11 +73,13 @@ It will clear caching and delete all build files to just keep essential files an
 
 > I prefer to use package locally so I use `npx` to execute gulp. If you prefer to call gulp directly, install it globally : `npm i -g gulp`
 
+
 &nbsp; <!-- break line -->
+
 
 ## Installation
 
-1. After duplicate the project use refactor fonction to change all occurecies of 'MyWPStarterTheme' in all files to change the name of your theme.
+1. After duplicate the project use refactor fonction to change all occurecies of `MyWPStarterTheme` and `mywpstartertheme` in all files to change the name of your theme. **? Be careful to respect the case ?**
 2. Edit `_src/sass/style.scss` first comment to change theme informations.
 3. Change the 'screenshot.png' image.
 4. Configure browserSync:\
@@ -56,29 +95,345 @@ It will clear caching and delete all build files to just keep essential files an
 5. Update `node_modules` with `npm i`
 6. **You're done**
 
+
 &nbsp; <!-- break line -->
 
-## Organisation
 
-### Oganisation of `assets` folder
-- `matrix` : store all matrix assets
-  - `icons` : store matrix icons
-  - 
-### Organisation for sass:
+## Project architecture
 
-- `elements` : all style applied globaly on specific html elements, separated by subfolder for its components when it's necessary
-- `modules` : style used for core functionnalities
-- `variables-site` : sass variables
-- `pages` : all specific style for only one page
-- `post_type` : specific style used for one spécific post type (page, post, CPT...)
+I use my own project architecture to be able to separate source code and compile one.
 
-### Organisation for php:
+<!-- PHP language gives the best syntax color -->
+```php
+📦MyWPStarterTheme
+ ┣ 📂_src
+ ┃  ┣ 📂assets
+ ┃  ┃  ┃
+ ┃  ┃  ┣ 📂fonts
+ ┃  ┃  ┃  ┗ 📂fontFolder '> Here there are all the fonts are in their own folder'
+ ┃  ┃  ┃
+ ┃  ┃  ┗ 📂imgs
+ ┃  ┃     ┣ 📂matrix
+ ┃  ┃     ┃  ┣ 📂icons
+ ┃  ┃     ┃  ┃  ┗ 📜 '> here there are all matrix icons alternatives'
+ ┃  ┃     ┃  ┃
+ ┃  ┃     ┃  ┣ 📂illustrations
+ ┃  ┃     ┃  ┃  ┗ 📜 '> here there are all matrix illustrations alternatives'
+ ┃  ┃     ┃  ┃
+ ┃  ┃     ┃  ┗ 📂pictures
+ ┃  ┃     ┃     ┗ 📜 '> here there are all matrix pictures'
+ ┃  ┃     ┃
+ ┃  ┃     ┗ 📂vector
+ ┃  ┃        ┣ 📂icons-vector
+ ┃  ┃        ┃  ┗ 📜 '> here there are all vector icons alternatives'
+ ┃  ┃        ┃
+ ┃  ┃        ┗ 📂illustrations-vector
+ ┃  ┃           ┗ 📜 '> here there are all vector illustrations alternatives'
+ ┃  ┃
+ ┃  ┣ 📂js
+ ┃  ┃  ┣ 📂modules-scripts
+ ┃  ┃  ┃  ┗ 📜 '> here there are all scripts use multiple times over the theme'
+ ┃  ┃  ┃
+ ┃  ┃  ┗ 📂pages-scripts
+ ┃  ┃     ┗ 📜 '> here there are all scripts use only one times for on specific page'
+ ┃  ┃
+ ┃  ┣ 📂php
+ ┃  ┃  ┣ 📂inc
+ ┃  ┃  ┃  ┗ 📂template-parts
+ ┃  ┃  ┃     ┗ 📜 '> here there are all template-parts WP theme'
+ ┃  ┃  ┃
+ ┃  ┃  ┣ 📂modules-php
+ ┃  ┃  ┃  ┗ 📜 '> here there are all PHP code use multiple times over the theme'
+ ┃  ┃  ┃
+ ┃  ┃  ┣ 📂page_templates
+ ┃  ┃  ┃  ┗ 📜 '> here there are all page templates for WP theme'
+ ┃  ┃  ┃
+ ┃  ┃  ┗ 📜 '> here there are all standard WP pages, like index.php'
+ ┃  ┃
+ ┃  ┗ 📂sass
+ ┃     ┣ 📂backoffice-style
+ ┃     ┃  ┗ 📜 '> here there are all style for backoffice (compiled in admin.css style sheet)'
+ ┃     ┃
+ ┃     ┣ 📂elements-style
+ ┃     ┃  ┗ 📜 '> here there are all style applied on "elements" use multiple time over the theme, like footer / links etc...'
+ ┃     ┃
+ ┃     ┣ 📂modules-style
+ ┃     ┃  ┗ 📜 '> here there are all style used to implement fonctionnalitied, like accessibility or normalize'
+ ┃     ┃
+ ┃     ┣ 📂templates-style
+ ┃     ┃  ┗ 📜 '> here there are all style sheet for each page, use for specific style on only one page'
+ ┃     ┃
+ ┃     ┣ 📂variables-style
+ ┃     ┃  ┗ 📜 '> here there are all SASS variables, like colors'
+ ┃     ┃
+ ┃     ┣ 📜admin.scss '> this file is import all necessary for style backoffice of WP'
+ ┃     ┗ 📜style.scss '> this file import all necessary style'
+ ┃
+ ┣ 📜 .gitattributes
+ ┣ 📜 .gitignore
+ ┣ 📜 CHANGELOG.md
+ ┣ 📜 gulpfile.js '> this file comes with [my own gulp file](https://github.com/MrZyr0/MyGulpFile)'
+ ┣ 📜 LICENSE.md
+ ┣ 📜 NOTICE.md
+ ┣ 📜 package-lock.json '> this file comes with [my own gulp file](https://github.com/MrZyr0/MyGulpFile)'
+ ┣ 📜 package.json '> this file comes with [my own gulp file](https://github.com/MrZyr0/MyGulpFile)'
+ ┣ 📜 README.md
+ ┗ 📜 screenshot.png '> this file is the screenshot used by WP on theme selection'
+ ```
 
-- `inc` : all includes
-- `inc/templates-parts` : all templates
-- `modules` : all modules (ex: WP customizer), separated by subfolder for its components when it's necessary
 
-### Organisation for js:
+&nbsp; <!-- break line -->
 
-- `pages` : all scripts for only one page
-- `modules` : all script modules
+
+## Roadmap
+
+Please check `[Unreleased]` tag in [changelog](CHANGELOG.md) to read what's next.
+
+
+&nbsp; <!-- break line -->
+
+
+## Cool tools
+
+In addition to the theme here are some interesting tools and/or that I use.\
+_I have benchmarked many plugins to make this list._
+_When there's only one plugin for a feature, it's because I've determined that it's the best (the most powerful, the most practical, the lightest)._
+
+### Content
+
+- [Smart Slider 3 - Responsive & SEO friendly slider](https://wordpress.org/plugins/smart-slider-3/)
+- [Gutemberg - Keep up to date independently of WP](https://wordpress.org/gutenberg/)
+- [Health Check & Troubleshooting - Keep up to date independently of WP](https://wordpress.org/plugins/health-check/)
+- [WP Block Revealer - Reveal gutemberg blocs while editing](https://wordpress.org/plugins/wp-block-revealer/)
+
+### Development
+
+- [Block Unit Test - Test all gutemberg bloc at the same time](https://wordpress.org/plugins/block-unit-test/)
+- [Lorem Shortcode - Quickly fill pages without content](https://wordpress.org/plugins/lorem-shortcode/)
+
+### Security
+
+- [WP Scan - Scan WordPress for known vulnerabilities](https://wordpress.org/plugins/wpscan/)
+- [SecuPress - n°1 of security plugin](https://wordpress.org/plugins/secupress/)
+
+### Search Engine Optimization (SEO)
+
+- [SEOPress - Most complete plugin (much than YoastSEO)](https://wordpress.org/plugins/wp-seopress/)
+- [ImageSEO - Auto generate alt text, name and open graph tag](https://wordpress.org/plugins/imageseo/)
+
+### Performance optimizations
+
+- [WP Sweep - Database cleaner](https://wordpress.org/plugins/wp-sweep/) **|** **_[winner of this bench](https://youtu.be/aqeZyP5GVd4)_**
+- [ShortPixel Image Optimizer - Better compression than Imagify](https://wordpress.org/plugins/shortpixel-image-optimiser/)
+- [WP Rocket - The best cache plugin](https://wp-rocket.me/fr/) [**PAID**]
+- [Autoptimize](https://wordpress.org/plugins/autoptimize/) [**Free alternative pack to WP Rocket**]
+- [Cache Enabler](https://wordpress.org/plugins/cache-enabler/) [**Free alternative pack to WP Rocket**]
+- [Media Cleaner - Delete unused media](https://wordpress.org/plugins/media-cleaner/)
+- [Cloudflare](https://wordpress.org/plugins/cloudflare/)
+
+### Tools
+
+- [Post Type Switcher - Convert a post into another post type](https://wordpress.org/plugins/post-type-switcher/)
+- [Enable Media Replace - Replace a media by another while keeping the metadata and the URL](https://wordpress.org/plugins/enable-media-replace/)
+- [UpdraftPlus - Backups your WP !](https://wordpress.org/plugins/updraftplus/)
+- [Relevanssi – A Better Search](http://wordpress.org/extend/plugins/relevanssi/)
+- [WPS Notice Center - Group notices](https://wordpress.org/plugins/wps-notice-center/)
+- [BEA - Media Analytics](https://wordpress.org/plugins/bea-media-analytics/)
+- [BEA – Sanitize Filename](https://wordpress.org/plugins/bea-sanitize-filename/)
+- [Brozzme Plugins Thumbnails - Add thumbnail in installed plugin page](https://wordpress.org/plugins/brozzme-add-plugins-thumbnails/)
+- [Media File Renamer (Auto Rename) - Rename the media file by the media title](https://wordpress.org/plugins/media-file-renamer/)
+- [All-in-One WP Migration - Do quick backup for migration test or apply small changes to production](https:/.wordpress.org/plugins/all-in-one-wp-migration/)
+- [Revisionize - Copy post to draft and for easily editing](https://wordpress.org/plugins/revisionize/)
+- [File Manager](https://wordpress.org/plugins/wp-file-manager/)
+- [reGenerate Thumbnails Advanced - Regenerate Thumbnails after database / media cleaning](https://wordpress.org/plugins/regenerate-thumbnails-advanced/)
+
+### Need testing
+
+Here is mutiple plugins & tools, that could be implemented, for one usage that I need to test to determine the most interesting one.
+
+- **2AF:**
+  - [Google Authenticator – WordPress Two Factor Authentication (2FA)](https://wordpress.org/plugins/miniorange-2-factor-authentication/)
+  - [Two-Factor](https://wordpress.org/plugins/two-factor/)
+
+- **Some liveChat plugins:**
+  - <https://www.livezilla.net>
+  - <https://smooch.io>
+  - <https://lemtalk.com>
+  - <https://www.tawk.to>
+  - <https://www.userlike.com>
+  - <https://www.helpscout.com>
+  - <https://www.tidio.com>
+
+- **Gutemberg:**
+  - [Coblocks](https://wordpress.org/plugins/coblocks/)
+  - [Advanced Gutenberg](https://wordpress.org/plugins/advanced-gutenberg/)
+  - [Advanced Gutenberg Blocks](https://wordpress.org/plugins/advanced-gutenberg-blocks/)
+  - [Atomic Blocks](https://wordpress.org/plugins/atomic-blocks/)
+  - [Editor Blocks](https://wordpress.org/plugins/editor-blocks/)
+  - [Kadence Blocks](https://wordpress.org/plugins/kadence-blocks/)
+  - [Premium Blocks for Gutenberg](https://wordpress.org/plugins/premium-blocks-for-gutenberg/)
+  - [Ultimate Addons for Gutenberg](https://wordpress.org/plugins/ultimate-addons-for-gutenberg/)
+  - [Stackable Ultimate Gutenberg Blocks](https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/)
+  - [Grids: Layout builder for WordPress](https://wordpress.org/plugins/grids/)
+
+- **Analytics:**
+  - [Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP)](https://wordpress.org/plugins/google-analytics-dashboard-for-wp/)
+  - [MonsterInsights Google Analytics Dashboard](https://wordpress.org/plugins/google-analytics-for-wordpress/)
+  - [GAinWP](https://wordpress.org/plugins/ga-in/)
+  - [Google Site Kit](https://wordpress.org/plugins/google-site-kit/)
+  - [Matomo](https://matomo.org/)
+  - [Slimstat Analytics](https://wordpress.org/plugins/wp-slimstat/)
+
+- **Cookie notice & GDPR compliance:**
+  - [Cookie Notice for GDPR & CCPA](https://wordpress.org/plugins/cookie-notice/)
+  - [GDPR Cookie Consent](https://wordpress.org/plugins/cookie-law-info/)
+  - [GDPR Complianz](https://wordpress.org/plugins/complianz-gdpr/)
+
+- **Database optimizer:**
+  - [WP Sweep](https://wordpress.org/plugins/wp-sweep/)
+  - [WPS Cleaner](https://wordpress.org/plugins/wps-cleaner/)
+  - [WP Optimize](https://wordpress.org/plugins/wp-optimize/) _=> usefull for automation ?_
+
+- **Generating "legal notice":**
+  - <https://www.subdelirium.com/generateur-de-mentions-legales/> **:fr:**
+  - <http://generateur-de-mentions-legales.com/> **:fr:**
+
+- **Translation:**
+  - [Polylang](https://wordpress.org/plugins/polylang/)
+  - [Loco Translate](https://wordpress.org/plugins/loco-translate/)
+  - [Weglot](https://wordpress.org/plugins/weglot/)
+  - [WPML](https://wpml.org/)
+  - [GlotPress - OpenSource translation](https://wordpress.org/plugins/glotpress/)
+
+- **Forms:**
+  - [Caldera Forms](https://wordpress.org/plugins/caldera-forms/)
+  - [Contact form 7](https://wordpress.org/plugins/contact-form-7/)
+  - [Ninja Form](https://wordpress.org/plugins/ninja-forms/)
+  - [Very Simple Contact Form](https://wordpress.org/plugins/very-simple-contact-form/)
+  - [WPForms](https://wordpress.org/plugins/wpforms-lite/)
+
+- **Accessible video players:**
+  - [Ableplayer](https://ableplayer.github.io/ableplayer/)
+  - [Ozplayer](https://github.com/accessibilityoz/ozplayer-wordpress)
+
+- **Security:**
+  - [HTTP Header](https://wordpress.org/plugins/http-headers/)
+  - [HTTP Security](https://wordpress.org/plugins/http-security/)
+
+- **Search Engine Optimization (SEO):**
+  - [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/)
+  - [Premium SEO Pack](https://wordpress.org/plugins/premium-seo-pack/)
+  - [SEOPress](https://wordpress.org/plugins/wp-seopress/)
+  - [Slim SEO](https://wordpress.org/plugins/slim-seo/)
+  - [The SEO Framework](https://wordpress.org/plugins/autodescription/)
+  - [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
+  - [SmartCrawl](https://wordpress.org/plugins/smartcrawl-seo/)
+  - [Rank Math](https://wordpress.org/plugins/seo-by-rank-math/)
+
+- **Loading optimization:**
+  - [Asset CleanUp : Page Speed Booster - Manage style & script loading](https://wordpress.org/plugins/wp-asset-clean-up/)
+  - [Plugin Load Filter](https://wordpress.org/plugins/plugin-load-filter/)
+  - [Plugin Organizer](https://wordpress.org/plugins/plugin-organizer/)
+
+- [WP Admin UI - Customize WP Backoffice](https://wordpress.org/plugins/wp-admin-ui/)
+- [WP Control - Log CRON tasks](https://wordpress.org/plugins/wp-crontrol/)
+- [Archived Post Status](https://wordpress.org/plugins/archived-post-status/)
+- [Cloudflare page cache](https://wordpress.org/plugins/cloudflare-page-cache/)
+- [Rank Math - Optimize content for SEO](https://rankmath.com)
+- [WP Accessibility Helper (WAH)](https://wordpress.org/plugins/wp-accessibility-helper/)
+- [Pods - Interesting lternative to ACF](https://wordpress.org/plugins/pods/)
+- [Linkbuildr - automates links to the people you talk about in your article](https://wordpress.org/plugins/linkbuildr/)
+- [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
+- [WP 410 - Add 410 support](https://wordpress.org/plugins/wp-410/)
+- [Contextual Adminbar Color](https://github.com/JulioPotier/contextual-adminbar-color)
+- [WP Easy Backup - Backup WP](https://github.com/JulioPotier/Wp-Easy-Backup)
+- [WPUtilities - repo with some plugins to test](https://github.com/JulioPotier/WPUtilities)
+- [Jetpack](https://wordpress.org/plugins/jetpack/)
+- [Post Thumbnail Editor](https://wordpress.org/plugins/post-thumbnail-editor/)
+- [Safe SVG](https://wordpress.org/plugins/safe-svg/)
+
+
+&nbsp; <!-- break line -->
+
+
+## Technology Watch
+
+Here are some interesting sources and documentations that can help or inspire for web development (always WP oriented ??).
+
+### Repositories
+
+- [Some advance customizer controls](https://github.com/Codeinwp/customizer-controls)
+- [Beautifull GoDaddy's WP theme](https://themebeans.com/themes/)
+- [Other beautifull theme by Twenty Twenty's author](https://www.andersnoren.se/teman/)
+- [Gutemberg Library](https://gutenberghub.com/blocks/)
+- [Example of good website powered by WordPress](https://docs.google.com/spreadsheets/d/1BNH4LRCS0TRykjOKjN9k8NOw0PM_RnzxWTBe9W_FUZQ/edit#gid=0)
+- [wp.org plugins](https://profiles.wordpress.org/wordpressdotorg/#content-plugins)
+- [Alternate repo for WP plugins](https://github.com/imath/entrepot)
+
+### Tutorials / Articles
+
+- [Style Gutemberg UX](https://richtabor.com/add-wordpress-theme-styles-to-gutenberg/)
+- [Description of Twenty Twenty to base this theme on it **:fr:**](https://kinsta.com/fr/blog/theme-twenty-twenty/)
+- [WPformation tutorials **:fr:**](https://wpformation.com/wordpress/tutos-tutoriels-wordpress/)
+- [WPformation - SEO tutorials **:fr:**](https://wpformation.com/wordpress/referencement/)
+- [WPformation - Security articles **:fr:**](https://wpformation.com/wordpress/securite-wordpress/)
+- [WPformation - backups **:fr:**](https://wpformation.com/?s=SAUVEGARDE)
+- [WPformation - translate child theme **:fr:**](https://wpformation.com/comment-traduire-son-theme-wordpress-dans-un-theme-enfant/)
+- [WPformation - "pour les nuls" lot of articles on many web topics **:fr:**](https://wpformation.com/?s=pour+les+Nuls)
+- [Automating WordPress updates with Bedrock using Dependabot](https://carlalexander.ca/automatic-wordpress-updates-bedrock-dependabot)
+- [How to support ie easily](https://css-tricks.com/how-to-create-an-ie-only-stylesheet/)
+- [Fix for conditionnal ie](https://stackoverflow.com/questions/19502040/if-ie-conditionals-not-working)
+- [WordPress navigation accessibility **:fr:**](https://access42.net/wordpress-accessibilite-faciliter-la-navigation-partie1)
+- [Integrate accessibility **:fr:**](https://tnt20.access42.net/#D65)
+- [Speed up Your WordPress Site (Ultimate 2020 Guide) - Kinsta](https://kinsta.com/learn/speed-up-wordpress/)
+- [Customizing Gutenberg blocks with block styles (only with PHP/CSS)](https://themeshaper.com/2019/02/15/customizing-gutenberg-blocks-with-block-styles/amp/?__twitter_impression=true)
+- [Why is_admin() is totally unsafe for your Wordpress development](https://dev.to/lucagrandicelli/why-isadmin-is-totally-unsafe-for-your-wordpress-development-1le1)
+- [How to contribute to WP core](https://make.wordpress.org/core/handbook/tutorials/faq-for-new-contributors/)
+- [WordCamp conferences](https://wordpress.tv/)
+- [Julio Potier's videos - Live sécu WP](https://www.dropbox.com/sh/e5cwgdthsyraq7j/AACgIzmkG7WOFeSWrXIMBBsla?dl=0)
+- [CSP article](https://openweb.eu.org/articles/content-security-policy)
+- [Configuration of Piwik (former name of Matomo) to comply with the GDPR proposed by the CNIL **:fr:**](https://www.cnil.fr/sites/default/files/typo/document/Configuration_piwik.pdf)
+- [Attacking WordPress - useful for patching those vulnerabilities](https://hackertarget.com/attacking-wordpress/)
+- [Reusable blocs Gutemberg - usefull plugins **:fr:**](https://www.whodunit.fr/gutenberg-et-les-blocs-reutilisables-deux-plugins-indispensables/)
+- [Login Backdoor](https://secupress.me/blog/backdoor-user/)
+
+### Blogs
+
+- [wpTavern - blog](https://wptavern.com/)
+- [Good blog speak about WP **:fr:**](https://vincentdubroeucq.com/articles/)
+- [WP marmite](https://wpmarmite.com/en/blog/)
+- [CSP article](https://blog.dareboost.com/fr/2018/03/deployer-csp-une-approche-en-5-etapes/)
+- [WPbeginner - another WP blog](https://www.wpbeginner.com/blog/)
+- [GeepPress - blog **:fr:**](https://www.geekpress.fr/)
+- [WP channel **:fr:**](https://wpchannel.com/blog/)
+- [Kinsta - the host's blog](https://kinsta.com/fr/blog/)
+- [Smashing Magazine - A lot of technical topics around the web](https://www.smashingmagazine.com/)
+- [digWP - technical talk about WP](https://digwp.com/)
+- [SEOmix - SEO articles **:fr:**](https://www.seomix.fr/referencement/)
+- [SEOmix - WP spécific articles **:fr:**](https://www.seomix.fr/wordpress/)
+- [WP for dummies **:fr:**](https://www.wppourlesnuls.com/)
+
+### Tools
+
+- [WP Glossary](https://www.wpglossary.net/)
+- [Admin interface element presentation](https://wpadmin.bracketspace.com/)
+- [Web dev checklist](http://webdevchecklist.com/)
+- [The Front-End Checklist](https://frontendchecklist.io)
+- [CSS icons](https://css.gg/app)
+- [Test CSP on a page](https://securityheaders.com/)
+
+### Legal informations
+
+- [GDPR is very important, read CNIL's documentations ! **:fr:**](https://www.cnil.fr/)
+- [CNIL - GDPR developper guid](https://www.cnil.fr/fr/guide-rgpd-du-developpeur)
+
+### Other
+
+- [OceanWP - a pretty complete theme](https://wordpress.org/themes/oceanwp/)
+- [roots WP theme - Tools for modern WordPress development Bedrock architecture](https://roots.io/)
+- [Interesting Nginx PHP & MariaDB configuration for WP](https://github.com/QROkes/webinoly)
+- [FlyntWP - Interesting starter theme](https://flyntwp.com)
+- [New interesting HTML 5 attributes](https://developer.mozilla.org/fr/docs/Web/HTML/Attributs/autocomplete)
+- [Obfuscation plugin for wordpress - Pagerank sculpting](https://github.com/jmmorillon/wp-obfmylink)
+- [Tide - quality & test code analysis](https://www.wptide.org/)
+- [Improve prod/preprod media uploads plugin](https://github.com/BeAPI/prod-images)
