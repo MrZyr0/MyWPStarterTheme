@@ -11,7 +11,7 @@ const imageminMozjpeg = require('imagemin-mozjpeg'); // Optimize .jpg & .jpeg im
 const browserSync = require('browser-sync').create(); // Sync multiple browsers & auto refresh naviguator on save
 const del = require('del'); // Delete files before optimizations
 
-const browserLink = '[YOUR LINK TO YOUR PROJECT USING A WEBSERVER]';
+const browserLink = 'http://mywpstartertheme.local/';
 const browserPort = 3030;
 const srcFolder = './_src';
 const publicFolder = '.';
@@ -20,25 +20,26 @@ const srcSass = srcFolder + '/sass/**/**/*.+(sass|scss)';
 const sassCompileFiles = srcFolder + '/sass/+(style|admin).scss';
 const srcJS = srcFolder + '/js/**/*.js';
 const srcPHP = srcFolder + '/php/**/*.php';
-const srcImg = srcFolder + '/assets/**/*.+(svg|png|jpg|jpeg|gif)';
+const srcImgs = srcFolder + '/assets/imgs/**/*.+(svg|png|jpg|jpeg|gif)';
+const srcFonts = srcFolder + '/assets/fonts/**/*.+(ttf|woff|eot)';
 
 const publicStyleFolder = publicFolder + '/';
 const publicScriptFolder = publicFolder + '/js';
 const publicPagesFolder = publicFolder + '/';
-const publicImgsFolder = publicFolder + '/assets';
+const publicAssetsFolder = publicFolder + '/assets';
+const publicImagesFolder = publicAssetsFolder + '/imgs';
+const publicFontsFolder = publicAssetsFolder + '/fonts';
 
-function clean(done) {
-	del([
+function clean() {
+	return del([
 		publicStyleFolder + '*.css',
 		publicScriptFolder,
 		publicPagesFolder + '*.php',
 		publicPagesFolder + 'inc/',
-		publicPagesFolder + 'modules/',
+		publicPagesFolder + 'modules-php/',
 		publicPagesFolder + 'page_templates/',
-		publicImgsFolder
-	]);
-	gulp_cache.clearAll();
-	done();
+		publicAssetsFolder
+	]).then(gulp_cache.clearAll());
 }
 
 /********************
@@ -46,7 +47,6 @@ function clean(done) {
  ********************/
 
 function styleDev() {
-	del(publicStyleFolder + '*.css');
 	return gulp
 		.src(sassCompileFiles)
 		.pipe(gulp_sass_glob())
@@ -55,20 +55,21 @@ function styleDev() {
 		.pipe(gulp.dest(publicStyleFolder));
 }
 
-function scriptDev() {
-	del(publicScriptFolder);
+function scriptsDev() {
 	return gulp.src(srcJS).pipe(gulp.dest(publicScriptFolder));
 }
 
 function pagesDev() {
-	del([publicPagesFolder + '*.php']);
 	return gulp.src(srcPHP).pipe(gulp.dest(publicPagesFolder));
 }
 
-function imgDev() {
-	del([publicImgsFolder + '/img/*.+(svg|png|jpg|jpeg|gif)']);
+function fontsDev() {
+	return gulp.src(srcFonts).pipe(gulp.dest(publicFontsFolder));
+}
+
+function imgsDev() {
 	return gulp
-		.src(srcImg)
+		.src(srcImgs)
 		.pipe(
 			gulp_cache(
 				gulp_imagemin([
@@ -101,17 +102,22 @@ function imgDev() {
 				])
 			)
 		)
-		.pipe(gulp.dest(publicImgsFolder));
+		.pipe(gulp.dest(publicImagesFolder));
 }
 
-const devBuild = gulp.parallel(styleDev, scriptDev, pagesDev, imgDev);
+const devBuild = gulp.parallel(
+	styleDev,
+	scriptsDev,
+	pagesDev,
+	imgsDev,
+	fontsDev
+);
 
 /*********************
  *   Prod functions  *
  *********************/
 
 function styleProd() {
-	del(publicStyleFolder + '*.css');
 	return gulp
 		.src(sassCompileFiles)
 		.pipe(gulp_sass_glob())
@@ -122,7 +128,6 @@ function styleProd() {
 }
 
 function scriptProd() {
-	del(publicScriptFolder + '/*.js');
 	return gulp
 		.src(srcJS)
 		.pipe(gulp_uglify())
@@ -130,14 +135,16 @@ function scriptProd() {
 }
 
 function pagesProd() {
-	del([publicPagesFolder + '*.php']);
 	return gulp.src(srcPHP).pipe(gulp.dest(publicPagesFolder));
 }
 
+function fontsProd() {
+	return gulp.src(srcFonts).pipe(gulp.dest(publicFontsFolder));
+}
+
 function imgProd() {
-	del([publicImgsFolder + '/img/*.+(svg|png|jpg|jpeg|gif)']);
 	return gulp
-		.src(srcImg)
+		.src(srcImgs)
 		.pipe(
 			gulp_cache(
 				gulp_imagemin([
@@ -170,10 +177,16 @@ function imgProd() {
 				])
 			)
 		)
-		.pipe(gulp.dest(publicImgsFolder));
+		.pipe(gulp.dest(publicImagesFolder));
 }
 
-const prodBuild = gulp.parallel(styleProd, scriptProd, pagesProd, imgProd);
+const prodBuild = gulp.parallel(
+	styleProd,
+	scriptProd,
+	pagesProd,
+	imgProd,
+	fontsProd
+);
 
 /********************
  *   Browser Sync    *
@@ -183,19 +196,22 @@ function browserSyncReload(done) {
 	done();
 }
 
-function devSync() {
+function browserSyncServer(done) {
 	browserSync.init({
 		proxy: browserLink,
 		port: browserPort
 	});
 
 	gulp.watch(srcSass, gulp.series(styleDev, browserSyncReload));
-	gulp.watch(srcJS, gulp.series(scriptDev, browserSyncReload));
+	gulp.watch(srcJS, gulp.series(scriptsDev, browserSyncReload));
 	gulp.watch(srcPHP, gulp.series(pagesDev, browserSyncReload));
-	gulp.watch(srcImg, gulp.series(imgDev, browserSyncReload));
+	gulp.watch(srcImgs, gulp.series(imgsDev, browserSyncReload));
+	gulp.watch(srcFonts, gulp.series(fontsDev, browserSyncReload));
+
+	done();
 }
 
-exports.default = gulp.series(clean, devBuild, devSync);
+exports.default = gulp.series(clean, devBuild, browserSyncServer);
 exports.work = exports.default;
 
 exports.build = gulp.series(clean, prodBuild);
