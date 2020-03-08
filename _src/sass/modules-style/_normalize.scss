@@ -9,9 +9,9 @@
 */
 
 html {
-line-height: 1.15; /* 1 */
--webkit-text-size-adjust: 100%; /* 2 */
-box-sizing: border-box;
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	box-sizing: border-box;
 }
 
 /* Sections
@@ -22,7 +22,8 @@ box-sizing: border-box;
 */
 
 body {
-margin: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /**
@@ -30,7 +31,7 @@ margin: 0;
 */
 
 main {
-display: block;
+	display: block;
 }
 
 /**
@@ -39,8 +40,8 @@ display: block;
 */
 
 h1 {
-font-size: 2em;
-margin: 0.67em 0;
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -52,9 +53,9 @@ margin: 0.67em 0;
 */
 
 hr {
-box-sizing: content-box; /* 1 */
-height: 0; /* 1 */
-overflow: visible; /* 2 */
+	box-sizing: content-box; /* 1 */
+	height: 0; /* 1 */
+	overflow: visible; /* 2 */
 }
 
 /**
@@ -63,8 +64,8 @@ overflow: visible; /* 2 */
 */
 
 pre {
-font-family: monospace, monospace; /* 1 */
-font-size: 1em; /* 2 */
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -75,7 +76,7 @@ font-size: 1em; /* 2 */
 */
 
 a {
-background-color: transparent;
+	background-color: transparent;
 }
 
 /**
@@ -84,9 +85,9 @@ background-color: transparent;
 */
 
 abbr[title] {
-border-bottom: none; /* 1 */
-text-decoration: underline; /* 2 */
-text-decoration: underline dotted; /* 2 */
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -95,7 +96,7 @@ text-decoration: underline dotted; /* 2 */
 
 b,
 strong {
-font-weight: bolder;
+	font-weight: bolder;
 }
 
 /**
@@ -106,8 +107,8 @@ font-weight: bolder;
 code,
 kbd,
 samp {
-font-family: monospace, monospace; /* 1 */
-font-size: 1em; /* 2 */
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
 /**
@@ -115,7 +116,7 @@ font-size: 1em; /* 2 */
 */
 
 small {
-font-size: 80%;
+	font-size: 80%;
 }
 
 /**
@@ -125,18 +126,18 @@ font-size: 80%;
 
 sub,
 sup {
-font-size: 75%;
-line-height: 0;
-position: relative;
-vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sub {
-bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 sup {
-top: -0.5em;
+	top: -0.5em;
 }
 
 /* Embedded content
@@ -147,7 +148,7 @@ top: -0.5em;
 */
 
 img {
-border-style: none;
+	border-style: none;
 }
 
 /* Forms
@@ -158,16 +159,16 @@ border-style: none;
 * 2. Remove the margin in Firefox and Safari.
 */
 
-button,
-input,
-optgroup,
-select,
-textarea {
-font-family: inherit; /* 1 */
-font-size: 100%; /* 1 */
-line-height: 1.15; /* 1 */
-margin: 0; /* 2 */
-}
+// button,
+// input,
+// optgroup,
+// select,
+// textarea {
+// 	font-family: inherit; /* 1 */
+// 	font-size: 100%; /* 1 */
+// 	line-height: 1.15; /* 1 */
+// 	margin: 0; /* 2 */
+// }
 
 /**
 * Show the overflow in IE.
@@ -175,8 +176,9 @@ margin: 0; /* 2 */
 */
 
 button,
-input { /* 1 */
-overflow: visible;
+input {
+	/* 1 */
+	overflow: visible;
 }
 
 /**
@@ -185,8 +187,9 @@ overflow: visible;
 */
 
 button,
-select { /* 1 */
-text-transform: none;
+select {
+	/* 1 */
+	text-transform: none;
 }
 
 /**
@@ -194,10 +197,10 @@ text-transform: none;
 */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
--webkit-appearance: button;
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
 }
 
 /**
@@ -205,11 +208,11 @@ button,
 */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-border-style: none;
-padding: 0;
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
 }
 
 /**
@@ -217,10 +220,10 @@ padding: 0;
 */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-outline: 1px dotted ButtonText;
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+	outline: 1px dotted ButtonText;
 }
 
 /**
@@ -228,7 +231,7 @@ outline: 1px dotted ButtonText;
 */
 
 fieldset {
-padding: 0.35em 0.75em 0.625em;
+	padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -239,12 +242,12 @@ padding: 0.35em 0.75em 0.625em;
 */
 
 legend {
-box-sizing: border-box; /* 1 */
-color: inherit; /* 2 */
-display: table; /* 1 */
-max-width: 100%; /* 1 */
-padding: 0; /* 3 */
-white-space: normal; /* 1 */
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
 }
 
 /**
@@ -252,7 +255,7 @@ white-space: normal; /* 1 */
 */
 
 progress {
-vertical-align: baseline;
+	vertical-align: baseline;
 }
 
 /**
@@ -260,7 +263,7 @@ vertical-align: baseline;
 */
 
 textarea {
-overflow: auto;
+	overflow: auto;
 }
 
 /**
@@ -268,19 +271,19 @@ overflow: auto;
 * 2. Remove the padding in IE 10.
 */
 
-[type="checkbox"],
-[type="radio"] {
-box-sizing: border-box; /* 1 */
-padding: 0; /* 2 */
+[type='checkbox'],
+[type='radio'] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
 }
 
 /**
 * Correct the cursor style of increment and decrement buttons in Chrome.
 */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-height: auto;
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+	height: auto;
 }
 
 /**
@@ -288,17 +291,17 @@ height: auto;
 * 2. Correct the outline style in Safari.
 */
 
-[type="search"] {
--webkit-appearance: textfield; /* 1 */
-outline-offset: -2px; /* 2 */
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
 }
 
 /**
 * Remove the inner padding in Chrome and Safari on macOS.
 */
 
-[type="search"]::-webkit-search-decoration {
--webkit-appearance: none;
+[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
 }
 
 /**
@@ -307,8 +310,8 @@ outline-offset: -2px; /* 2 */
 */
 
 ::-webkit-file-upload-button {
--webkit-appearance: button; /* 1 */
-font: inherit; /* 2 */
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -319,7 +322,7 @@ font: inherit; /* 2 */
 */
 
 details {
-display: block;
+	display: block;
 }
 
 /*
@@ -327,7 +330,7 @@ display: block;
 */
 
 summary {
-display: list-item;
+	display: list-item;
 }
 
 /* Misc
@@ -338,7 +341,7 @@ display: list-item;
 */
 
 template {
-display: none;
+	display: none;
 }
 
 /**
@@ -346,7 +349,7 @@ display: none;
 */
 
 [hidden] {
-display: none;
+	display: none;
 }
 
 /**
@@ -355,23 +358,22 @@ display: none;
 *,
 *:before,
 *:after {
-box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 /**
 * Prevent from horizontal scolling
 */
 html,
-body
-{
-    position: relative;
-    min-width: 100%;
-    min-width: 100vw;
-    width: 100%;
-    width: 100vw;
-    max-width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
+body {
+	// position: relative;
+	min-width: 100%;
+	min-width: 100vw;
+	width: 100%;
+	width: 100vw;
+	max-width: 100%;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 /**
@@ -379,19 +381,19 @@ body
 */
 
 /* clears the 'X' from Internet Explorer */
-input.hide-clear-cross[type=search]::-ms-clear,
-input.hide-clear-cross[type=search]::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0; 
-  -webkit-appearance:none;
+input.hide-clear-cross[type='search']::-ms-clear,
+input.hide-clear-cross[type='search']::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+	-webkit-appearance: none;
 }
 
 /* clears the 'X' from Chrome */
-input.hide-clear-cross[type="search"]::-webkit-search-decoration,
-input.hide-clear-cross[type="search"]::-webkit-search-cancel-button,
-input.hide-clear-cross[type="search"]::-webkit-search-results-button,
-input.hide-clear-cross[type="search"]::-webkit-search-results-decoration {
-  display: none; 
-  -webkit-appearance:none;
+input.hide-clear-cross[type='search']::-webkit-search-decoration,
+input.hide-clear-cross[type='search']::-webkit-search-cancel-button,
+input.hide-clear-cross[type='search']::-webkit-search-results-button,
+input.hide-clear-cross[type='search']::-webkit-search-results-decoration {
+	display: none;
+	-webkit-appearance: none;
 }

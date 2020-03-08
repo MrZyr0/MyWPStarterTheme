@@ -1,0 +1,431 @@
+// Specific style for naviguation bar
+
+body {
+	height: 200vh;
+}
+
+nav#site-navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0 20px;
+
+	// hide burger on desktop
+	> input#site-navigation__burger-menu__checkbox,
+	> label#site-navigation__burger-menu__icon,
+	> label#site-navigation__burger-menu__checkbox__label {
+		display: none; // Completly hide burger menu on desktop (not focusable with keyboard)
+		margin: 0; // Remove browser's margin
+		padding: 0; // Remove browser's padding
+	}
+
+	// remove browser style to all lists
+	ul {
+		margin: 0;
+		padding: 0;
+
+		list-style: none;
+	}
+
+	> ul.main-navigation__menu {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		min-height: 100%;
+		height: 100%;
+		max-height: 100%;
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			position: relative;
+
+			height: 100%;
+			min-height: 40px;
+
+			padding: 0 20px;
+
+			&:hover {
+				background-color: whitesmoke;
+
+				& > ul {
+					top: 100%;
+					opacity: 1;
+					z-index: 0;
+				}
+			}
+
+			> a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				text-decoration: none;
+				color: black;
+
+				font-weight: bold;
+
+				word-break: break-all;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+
+				&:focus + ul {
+					top: 100%;
+					opacity: 1;
+
+					z-index: 0;
+				}
+			}
+
+			img {
+				max-height: 100%;
+				width: auto;
+
+				// position: absolute;
+				// top: 50%;
+				// transform: translate(-50%, -50%);
+
+				// visibility: visible;
+			}
+
+			span {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				width: 100%;
+
+				font-weight: bold;
+
+				word-break: break-all;
+
+				&:focus + ul {
+					top: 100%;
+					opacity: 1;
+
+					z-index: 0;
+				}
+			}
+
+			ul {
+				display: flex;
+				flex-direction: column;
+
+				width: max-content;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				opacity: 0;
+
+				z-index: -1;
+
+				background-color: lightgrey;
+
+				&:focus-within {
+					top: 100%;
+					opacity: 1;
+
+					z-index: 0;
+				}
+
+				li {
+					min-width: max-content;
+
+					span,
+					a {
+						&:focus + ul {
+							left: 100%;
+							opacity: 1;
+							z-index: 0;
+						}
+					}
+
+					&:hover > ul {
+						left: 100%;
+						opacity: 1;
+						z-index: 0;
+					}
+
+					ul {
+						top: 0 !important;
+						left: 0;
+						opacity: 0;
+						z-index: -1;
+
+						&:focus-within {
+							// TODO: fix it for ie (READ: <https://la-cascade.io/html5-comprendre-les-polyfills-shivs-et-shims/>)
+							left: 100%;
+							opacity: 1;
+							z-index: 0;
+						}
+					}
+				}
+			}
+		}
+
+		> li#menu-item-0.menu-item-custom-logo {
+			position: relative;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 20px;
+			margin-right: 50px;
+			padding: 0;
+
+			// TODO: fix margin !
+
+			> a {
+				height: 1px;
+				width: 1px;
+				padding: 0;
+				margin: -1px;
+				border: 0;
+				overflow: hidden;
+				word-wrap: normal;
+			}
+
+			&:hover {
+				background-color: unset;
+				// TODO: add control for that
+				// filter: drop-shadow(0 0 3px white);
+			}
+		}
+	}
+
+	> form.search-form {
+		// position: absolute;
+		// top: 50%;
+		// right: 20px;
+		// transform: translateY(-50%);
+	}
+
+	a#main-navigation__custom_logo {
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
+
+		// min-width: 150px;
+	}
+}
+
+// TODO: Tout ce qui est burger c'est en dehors de la navbar
+
+@media screen and (max-width: 960px) {
+	nav#site-navigation {
+		> input#site-navigation__burger-menu__checkbox,
+		> label#site-navigation__burger-menu__icon,
+		> label#site-navigation__burger-menu__checkbox__label {
+			// Invert previous properties (be selectable with the keyboard)
+			display: block;
+		}
+
+		> label#site-navigation__burger-menu__checkbox__label {
+			// set properties according to screen-reader-text class
+			width: 1px;
+			height: 1px;
+		}
+
+		> input#site-navigation__burger-menu__checkbox {
+			// Hiding it visually
+			width: 0;
+			height: 0;
+
+			&:checked {
+				& + ul#menu-navbar {
+					visibility: visible;
+					width: auto;
+					height: auto;
+
+					> li.menu-item {
+						display: flex;
+					}
+				}
+
+				// annimation
+				& ~ label#site-navigation__burger-menu__icon {
+					> span:first-child {
+						top: 50%;
+						transform: translateY(-50%);
+						left: 50%;
+						right: 50%;
+					}
+
+					> span:nth-child(2) {
+						transform: translateY(-50%) rotate(45deg);
+					}
+
+					> span:nth-child(3) {
+						transform: translateY(-50%) rotate(-45deg);
+
+						// TODO: Fix shadow
+						&:before {
+							content: '';
+							// position: absolute;
+							top: 0px;
+							bottom: 0px;
+							left: 0px;
+							width: 42%;
+							// box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+							z-index: -1;
+							border-radius: 10px 0 0 10px;
+							// background: blue;
+						}
+
+						&:after {
+							content: '';
+							// position: absolute;
+							top: 0px;
+							bottom: 0px;
+							right: 0px;
+							width: 42%;
+							// box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+							z-index: -1;
+							border-radius: 0 10px 10px 0;
+							// background: blue;
+						}
+					}
+
+					> span:last-child {
+						top: 50%;
+						transform: translateY(-50%);
+						left: 50%;
+						right: 50%;
+					}
+				}
+			}
+
+			// Impossible to display the label as "skip-content" because it'll display it when click on icon label
+			// &:focus ~ label#site-navigation__burger-menu__checkbox__label {
+			// 	display: block;
+
+			// 	height: auto;
+			// 	width: auto;
+
+			// 	margin: 0;
+			// 	padding: 15px 20px;
+
+			// 	top: 5px;
+			// 	left: 5px;
+			// 	z-index: 100000;
+
+			// 	background-color: white;
+
+			// 	border: 3px solid rgb(0, 205, 255);
+			// 	border-radius: 5px;
+
+			// 	box-shadow: 0 0 10px 0 #00cdff;
+
+			// 	clip: auto;
+			// 	clip-path: none;
+
+			// 	font-size: 1em;
+			// 	font-weight: bold;
+			// 	color: black;
+
+			// 	text-decoration: none;
+			// 	line-height: normal;
+
+			// 	outline-color: black;
+			// 	outline-style: dotted;
+			// 	outline-offset: -5px;
+			// 	outline-width: initial;
+
+			// 	overflow: visible;
+			// }
+		}
+
+		> label#site-navigation__burger-menu__icon {
+			height: 35px;
+			width: 45px;
+
+			position: relative;
+
+			> span {
+				height: 7px;
+
+				position: absolute;
+				left: 0;
+				right: 0;
+
+				border-radius: 2000px;
+
+				transition: 250ms ease-in-out;
+				// TODO: Animate with keyframe to move top & bottom bar to the center & change width to 0 smoothly
+				// transition: 2s ease-in-out;
+
+				&:first-child {
+					box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+				}
+
+				&:nth-child(2) {
+					top: 50%;
+					transform: translateY(-50%);
+					box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+				}
+
+				&:nth-child(3) {
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				&:last-child {
+					bottom: 0;
+					box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+				}
+			}
+
+			&:after {
+				content: '';
+
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+
+				cursor: pointer;
+			}
+		}
+
+		> ul#menu-navbar {
+			visibility: hidden;
+
+			> li.menu-item {
+				display: none;
+
+				ul {
+					// Add .screen-reader-text properties to be selectable with keyboard but not by touching
+					position: absolute;
+					height: 1px;
+					width: 1px;
+					padding: 0;
+					margin: -1px;
+					border: 0;
+					clip: rect(1px, 1px, 1px, 1px);
+					clip-path: inset(50%);
+					overflow: hidden;
+					word-wrap: normal;
+				}
+			}
+
+			> li#menu-item-0.menu-item-custom-logo {
+				// visibility: visible;
+			}
+		}
+
+		> form.search-form {
+		}
+	}
+}

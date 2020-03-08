@@ -1,5 +1,7 @@
 /* Text meant only for screen readers. */
 .screen-reader-text {
+	position: absolute;
+
 	height: 1px;
 	width: 1px;
 
@@ -11,8 +13,7 @@
 	clip-path: inset(50%);
 
 	overflow: hidden;
-	position: absolute !important;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	word-wrap: normal; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 
 	&:focus {
 		display: block;
@@ -20,30 +21,35 @@
 		height: auto;
 		width: auto;
 
-		padding: 15px 23px 14px;
+		margin: 0;
+		padding: 15px 20px;
 
 		top: 5px;
 		left: 5px;
-
-		z-index: 100000; /* Above WP toolbar. */
+		z-index: 100000;
 
 		background-color: white;
-		border-radius: 3px;
-		box-shadow: 0 0 2px 2px rgba(0, 205, 255, 0.6);
 
-		color: black;
-		font-size: 1.5em;
-		font-weight: bold;
-		text-decoration: none;
+		border: 3px solid rgb(0, 205, 255);
+		border-radius: 5px;
 
-		clip: auto !important;
+		box-shadow: 0 0 10px 0 #00cdff;
+
+		clip: auto;
 		clip-path: none;
 
-		line-height: normal;
-	}
-}
+		font-size: 1em;
+		font-weight: bold;
+		color: black;
 
-/* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
-	outline: 0;
+		text-decoration: none;
+		line-height: normal;
+
+		outline-color: black;
+		outline-style: dotted;
+		outline-offset: -5px;
+		outline-width: initial;
+
+		overflow: visible;
+	}
 }
