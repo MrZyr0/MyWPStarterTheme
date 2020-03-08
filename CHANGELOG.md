@@ -80,6 +80,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 &nbsp; <!-- break line -->
 
 
+## [0.2.1] - 2020-03-08
+
+### Changed
+
+- Revert matrix search icon to the original one (files in `_src` folder should not be optimized)
+
+
 ## [0.2.0] - 2020-03-08
 
 ### Added
