@@ -24,7 +24,8 @@
     - [Repositories](#repositories)
     - [Tutorials / Articles](#tutorials--articles)
     - [Blogs](#blogs)
-    - [Tools](#tools-1)
+    - [Tools / Documentation](#tools--documentation)
+    - [Books](#books)
     - [Legal informations](#legal-informations)
     - [Other](#other)
 
@@ -34,7 +35,17 @@
 
 ## Introduction
 
-My WordPress theme starter humbly light, complete, clear and more secure as possible.
+My WordPress theme starter humbly light, complete, compatible and more secure as possible.
+
+I follow [BEM](https://getbem.com) soon as possible accros the project (folder/file name, HTML/CSS class & id).
+<!-- 
+// TODO: apply this:
+Because we can't use hyphen (dash : `-`) in php naming, I replaced it by underscore (`_`) as following : `block_name__element__modifier`
+-->
+
+The goal is that the theme works in a regressive way.
+In any case the user can navigate normally in all conditions on all browsers ([up to 2 versions back](https://browserl.ist/?q=last+2+versions) ≃ ie 10)
+<!-- TODO: improve support up to ie 8 -->
 
 
 &nbsp; <!-- break line -->
@@ -79,7 +90,8 @@ It will clear caching and delete all build files to just keep essential files an
 
 ## Installation
 
-1. After duplicate the project use refactor fonction to change all occurecies of `MyWPStarterTheme` and `mywpstartertheme` in all files to change the name of your theme. **? Be careful to respect the case ?**
+1. After duplicate the project use refactor fonction to change `MyWPStarterTheme` and `mywpstartertheme` in all files to change the name of your theme.\
+   **⚠ Be careful to respect the case and keep mentions of MyWPStarterTheme in README & in style.scss (like License URI)⚠**
 2. Edit `_src/sass/style.scss` first comment to change theme informations.
 3. Change the 'screenshot.png' image.
 4. Configure browserSync:\
@@ -135,7 +147,7 @@ I use my own project architecture to be able to separate source code and compile
  ┃  ┃  ┃  ┗ 📜 '> here there are all scripts use multiple times over the theme'
  ┃  ┃  ┃
  ┃  ┃  ┗ 📂pages-scripts
- ┃  ┃     ┗ 📜 '> here there are all scripts use only one times for on specific page'
+ ┃  ┃     ┗ 📂pageFolder '> here there are all scripts use only one times for on specific page groupes by pages in directory'
  ┃  ┃
  ┃  ┣ 📂php
  ┃  ┃  ┣ 📂inc
@@ -228,6 +240,7 @@ _When there's only one plugin for a feature, it's because I've determined that i
 - [WP Rocket - The best cache plugin](https://wp-rocket.me/fr/) [**PAID**]
 - [Autoptimize](https://wordpress.org/plugins/autoptimize/) [**Free alternative pack to WP Rocket**]
 - [Cache Enabler](https://wordpress.org/plugins/cache-enabler/) [**Free alternative pack to WP Rocket**]
+- [Lazy Loading Feature Plugin](https://wordpress.org/plugins/wp-lazy-loading/)
 - [Media Cleaner - Delete unused media](https://wordpress.org/plugins/media-cleaner/)
 - [Cloudflare](https://wordpress.org/plugins/cloudflare/)
 
@@ -329,6 +342,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
   - [SmartCrawl](https://wordpress.org/plugins/smartcrawl-seo/)
   - [Rank Math](https://wordpress.org/plugins/seo-by-rank-math/)
+  - [Future sitemap generation plugin integrated in core](https://wordpress.org/plugins/core-sitemaps/)
 
 - **Loading optimization:**
   - [Asset CleanUp : Page Speed Booster - Manage style & script loading](https://wordpress.org/plugins/wp-asset-clean-up/)
@@ -351,6 +365,9 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - [Jetpack](https://wordpress.org/plugins/jetpack/)
 - [Post Thumbnail Editor](https://wordpress.org/plugins/post-thumbnail-editor/)
 - [Safe SVG](https://wordpress.org/plugins/safe-svg/)
+- [JB Audras's plugins](https://github.com/audrasjb?tab=repositories)
+- [Quality Web Checklist](https://wordpress.org/plugins/quality-checklist-opquast/)
+- [A good mega menu](https://www.megamenu.com/)
 
 
 &nbsp; <!-- break line -->
@@ -358,7 +375,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 
 ## Technology Watch
 
-Here are some interesting sources and documentations that can help or inspire for web development (always WP oriented ??).
+Here are some interesting sources and documentations that can help or inspire for web development (WP, accessibility, compatibility, best practices, etc.).
 
 ### Repositories
 
@@ -372,6 +389,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 
 ### Tutorials / Articles
 
+- [Capitainewp **:fr:**](https://capitainewp.io/formations)
 - [Style Gutemberg UX](https://richtabor.com/add-wordpress-theme-styles-to-gutenberg/)
 - [Description of Twenty Twenty to base this theme on it **:fr:**](https://kinsta.com/fr/blog/theme-twenty-twenty/)
 - [WPformation tutorials **:fr:**](https://wpformation.com/wordpress/tutos-tutoriels-wordpress/)
@@ -396,6 +414,22 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Attacking WordPress - useful for patching those vulnerabilities](https://hackertarget.com/attacking-wordpress/)
 - [Reusable blocs Gutemberg - usefull plugins **:fr:**](https://www.whodunit.fr/gutenberg-et-les-blocs-reutilisables-deux-plugins-indispensables/)
 - [Login Backdoor](https://secupress.me/blog/backdoor-user/)
+- [List of usefull wp-config tricks](https://www.wpbeginner.com/wp-tutorials/useful-wordpress-configuration-tricks-that-you-may-not-know/)
+- [Writing HTML with accessibility in mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412)
+- [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939)
+- [HTML: A good basis for accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML)
+- [CSS and JavaScript accessibility best practices](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [CSS in Action Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/)
+- [Ditch Your Stateful CSS Classes for an Accessible Web](https://seesparkbox.com/foundry/ditch_your_stateful_css_classes_for_an_accessible_web)
+- [W3C - CSS Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/css)
+- [CSS Tricks - Improving the Accessibility of 24 ways](https://css-tricks.com/improving-accessibility-24-ways/)
+- [Improve accessibility of forms **:fr:**](http://css.mammouthland.net/formulaire-form-input-css.php)
+- [Write Website Specifications **:fr:**](https://www.seomix.fr/cahier-des-charges-web/)
+- [Risk management with WP **:fr:**](https://imathi.eu/2020/03/02/une-maitrise-des-risques-gonflee-a-bloc-grace-a-wordpress/)
+- [5 Ways to Create a WordPress Plugin Settings Page](https://deliciousbrains.com/create-wordpress-plugin-settings-page/)
+- [Gutemberg Template Library](https://gutenberghub.com/introducing-gutenberg-templates-library/)
+- [Google's image optimizations article](https://developers.google.com/web/tools/lighthouse/audits/optimize-images)
+- [Talk about HTML markup](https://html.com/semantic-markup/)
 
 ### Blogs
 
@@ -406,21 +440,43 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [WPbeginner - another WP blog](https://www.wpbeginner.com/blog/)
 - [GeepPress - blog **:fr:**](https://www.geekpress.fr/)
 - [WP channel **:fr:**](https://wpchannel.com/blog/)
-- [Kinsta - the host's blog](https://kinsta.com/fr/blog/)
+- [Kinsta - the host's blog](https://kinsta.com/blog/)
 - [Smashing Magazine - A lot of technical topics around the web](https://www.smashingmagazine.com/)
 - [digWP - technical talk about WP](https://digwp.com/)
 - [SEOmix - SEO articles **:fr:**](https://www.seomix.fr/referencement/)
 - [SEOmix - WP spécific articles **:fr:**](https://www.seomix.fr/wordpress/)
 - [WP for dummies **:fr:**](https://www.wppourlesnuls.com/)
+- [Another cool WP blog **:fr:**](https://wabeo.fr/blog/)
 
-### Tools
+### Tools / Documentation
 
+- [START HERE: WordPress configuration to dev theme](https://developer.wordpress.org/themes/basics/theme-functions/)
 - [WP Glossary](https://www.wpglossary.net/)
 - [Admin interface element presentation](https://wpadmin.bracketspace.com/)
 - [Web dev checklist](http://webdevchecklist.com/)
 - [The Front-End Checklist](https://frontendchecklist.io)
 - [CSS icons](https://css.gg/app)
 - [Test CSP on a page](https://securityheaders.com/)
+- [Security & code quality scanner for WP themes](https://themecheck.info/)
+<!-- // TODO: listing of conditionnal tags & hooks -->
+- [Official hooks listing](https://codex.wordpress.org/Plugin_API/Action_Reference)
+- [Search engine for WP doc](https://wpseek.com/)
+- [WP core load illustration](https://www.rarst.net/images/wordpress_core_load.png)
+- [WP official template hierarchy illustration interactive](https://www.wphierarchy.com/)
+- [WP officiel conditional tags listing](https://codex.wordpress.org/Conditional_Tags)
+<!-- //TODO: add more usefull illustrations -->
+- [Axe accessibility rules](https://dequeuniversity.com/rules/)
+- [Axe's website - Accessibility tools](https://www.deque.com/)
+- [WP quality checklist](https://wpaudit.site/)
+- [HTML sementics cheat shee](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
+- [Interactive CSS selectors cheat sheet](https://frontend30.com/css-selectors-cheatsheet/)
+- [CSS selectors cheat sheet](https://gist.github.com/magicznyleszek/809a69dd05e1d5f12d01)
+- [Lando, docker's WP environnement](https://github.com/lando/lando)
+
+### Books
+
+- [WPcookBook - A complete guide on theme development](https://vincentdubroeucq.com/wpcookbook/)
+- [All secrets of wp-config.php](https://21douze.fr/mon-livre-constantes-wp-config)
 
 ### Legal informations
 
@@ -437,3 +493,4 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Obfuscation plugin for wordpress - Pagerank sculpting](https://github.com/jmmorillon/wp-obfmylink)
 - [Tide - quality & test code analysis](https://www.wptide.org/)
 - [Improve prod/preprod media uploads plugin](https://github.com/BeAPI/prod-images)
+- [Official WordPress make's slack](https://make.wordpress.org/chat/)
