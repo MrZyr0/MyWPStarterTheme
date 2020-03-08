@@ -32,7 +32,8 @@ if (is_localhost()) {
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+	<noscript tabindex="0"><p><?= __('Attention, allow Javascript to have a complete support of accessibility', 'mywpstartertheme') ?></p></noscript>
+	<a id="skip-link" class="skip-link screen-reader-text" href="#site-content"><?= __( 'Skip to the content', 'mywpstartertheme' ) ?></a>
 	<a class="skip-link screen-reader-text" href="#content">Aller directement au contenu de la page</a>
 	<?php wp_body_open(); ?>
 
