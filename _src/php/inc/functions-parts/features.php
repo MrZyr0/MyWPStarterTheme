@@ -166,3 +166,70 @@ if(!WP_DEBUG) {
   define( 'SCRIPT_DEBUG', is_localhost() );
   define( 'WP_DEBUG_LOG', ! is_localhost() );
 }
+
+
+
+/**
+ * Return source path
+ * 
+ * 
+ * @param String $type file type
+ * @param String $file_name file name with it extension
+ * @return String $path return absolute http path
+ */
+// TODO: generalize usage of this function
+// TODO: add phpdoc var to be able to have auto completion
+function get_source_path(String $type, String $file_name)
+{
+	$path = '';
+
+	switch ($type) {
+		case 'font':
+			// TODO: fix font path
+			$path = get_template_directory_uri() . "/assets/fonts/$file_name/$file_name";
+		break;
+
+		case 'image-matrix-icon':
+			$path = get_template_directory_uri() . "/assets/imgs/matrix/icons/$file_name";
+		break;
+
+		case 'image-matrix-illustration':
+			$path = get_template_directory_uri() . "/assets/imgs/matrix/illustrations/$file_name";
+		break;
+
+		case 'image-matrix-picture':
+			$path = get_template_directory_uri() . "/assets/imgs/matrix/pictures/$file_name";
+		break;
+
+		case 'image-vector-icon':
+			$path = get_template_directory_uri() . "/assets/imgs/vector/icons-vector/$file_name";
+		break;
+
+		case 'image-vector-illustration':
+			$path = get_template_directory_uri() . "/assets/imgs/vector/illustrations-vector/$file_name";
+		break;
+
+		case 'module-script':
+			$path = get_template_directory_uri() . "/js/modules-scripts/$file_name";
+		break;
+
+		case 'page-script':
+			// TODO: improve page scripts path (all scripts are groupe by pages in same directory)
+			$path = get_template_directory_uri() . "/js/page-scripts/$file_name";
+		break;
+
+		case 'function-part':
+			$path = get_template_directory_uri() . "/php/inc/function-parts/$file_name";
+		break;
+
+		case 'template-part':
+			$path = get_template_directory_uri() . "/php/inc/template-parts/$file_name";
+		break;
+
+		default:
+			$path = 'error in get_source_path()';
+		break;
+	}
+
+	return (String) $path;
+}
