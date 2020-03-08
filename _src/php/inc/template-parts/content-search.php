@@ -4,7 +4,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package MyWPStarterTheme
  * @package mywpstartertheme
  */
 
@@ -17,20 +16,20 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			MyWPStarterTheme_posted_on();
-			MyWPStarterTheme_posted_by();
+			mywpstartertheme_posted_on();
+			mywpstartertheme_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php MyWPStarterTheme_post_thumbnail(); ?>
+	<?php mywpstartertheme_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php MyWPStarterTheme_entry_footer(); ?>
+		<?php mywpstartertheme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
