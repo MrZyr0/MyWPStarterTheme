@@ -22,9 +22,11 @@ if (is_localhost()) {
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<!-- declare HTML5 semantics-->
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="/js/html5shiv.js"></script>
-	<script type="text/javascript" src="/js/html5shiv-printshiv.js"></script>
+	<!-- TODO: Improve support (READ: <https://stackoverflow.com/questions/11667094/html5-semantic-elements-and-old-browsers>) -->
+	<!-- TODO: Add own script loader to enable these srcripts on all browser needed (READ: <https://github.com/aFarkas/html5shiv#the-html5-shiv>) -->
+	<!--[if lt IE 10]>
+	<script type="text/javascript" src="<?= get_source_path('module-script', 'html5shiv.js') ?>"></script>
+	<script type="text/javascript" src="<?= get_source_path('module-script', 'html5shiv-printshiv.js') ?>"></script>
 	<![endif]-->
 
 	<?php wp_head(); ?>
