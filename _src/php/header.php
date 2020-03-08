@@ -32,164 +32,152 @@ if (is_localhost()) {
 	<?php wp_head(); ?>
 </head>
 
+<body <?php body_class(); ?>>
 	<noscript tabindex="0"><p><?= __('Attention, allow Javascript to have a complete support of accessibility', 'mywpstartertheme') ?></p></noscript>
 	<a id="skip-link" class="skip-link screen-reader-text" href="#site-content"><?= __( 'Skip to the content', 'mywpstartertheme' ) ?></a>
-	<a class="skip-link screen-reader-text" href="#content">Aller directement au contenu de la page</a>
 	<?php wp_body_open(); ?>
 
 	<header id="masthead" class="site-header">
+	
+		<?php
+		if (get_theme_mod( 'mywpstartertheme__theme_options__navbar--show', true )) {
+		// TODO: display a placeholder with an "how to" if there is no menu on customizer (admin login)
+		// TODO: enable to replace custom logo by site title or another text
+		// TODO: add a warning when display empty navbar
+		?>
 
-		<?php // Title ?>
-		<?php if ( is_archive() ): ?>
-			<?php if ( is_category() ): ?>
-				<h1 class="page_title">Tous les postes de la catégorie "<?= strtolower(get_the_category()[0]->name) ?>"</h1>
+			<nav id="site-navigation" class="main-navigation navbar--size" role="navigation">
 
-			<?php elseif ( is_tag() ): ?>
-				<h1 class="page_title">Tous les postes de l'étiquette "<?= strtolower( single_tag_title() ) ?>"</h1>
-
-			<?php elseif ( is_author() ): ?>
-				<h1 class="page_title">Tous les postes de l'auteur "<?= strtolower( get_the_author() ) ?>"</h1>
-
-			<?php elseif ( is_year() ): ?>
-				<h1 class="page_title">Tous les postes pour l'<?= str_replace( ': ', '', strtolower( get_the_archive_title() ) ) ?></h1>
-
-			<?php elseif ( is_month() ): ?>
+			<?php
+			if (has_nav_menu('navbar')) {
+				// TODO: fix submenu display bug (when parent menu is focus or hover the child is focusable)
+			?>
+				<label id="site-navigation__burger-menu__checkbox__label" for="site-navigation__burger-menu__checkbox" class="screen-reader-text"><?= __('Navigation toggle', 'mywpstartertheme') ?></label>
+				<input type="checkbox" name="site-navigation__burger-menu__checkbox" id="site-navigation__burger-menu__checkbox" role="checkbox" aria-labelledby="site-navigation__burger-menu__checkbox__label" aria-label="Navigation toggle" aria-checked="false" onclick="burger_menu_toogle(event)" onkeydown="burger_menu_toogle(event)"/>
+				
 				<?php
-					$title = explode(' ', get_the_archive_title());
-					$month = $title[1];
-					$year = $title[2];
-
-					if ($month == 'avril' || $month == 'août' || $month == 'octobre') {
-						$determinant = 'd\'';
-					}
-					else {
-						$determinant = 'de';
-					}
-
-					$categoryDate = $determinant == 'd\'' ? $determinant . $month . ' ' . $year : $determinant . ' ' . $month . ' ' . $year;
-				?>
-
-				<h1 class="page_title">Tous les postes pour du mois <?= $categoryDate ?></h1>
-
-			<?php elseif ( is_day() ): ?>
-				<h1 class="page_title">Tous les postes du <?= str_replace( ': ', '', strtolower( get_the_archive_title() ) ) ?></h1>
-
-			<?php elseif ( is_date() ): ?>
-				<h1 class="page_title">Tous les postes pour le <?= strtolower( get_the_archive_title() ) ?></h1>
-
-			<?php endif; ?>
-
-			<h2 class="page-subtitle"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-
-		<?php elseif ( is_front_page() ): ?>
-			<h1 class="page_title"><?= single_post_title() ?></h1>
-			<?php if (get_post_meta($post->ID, 'subtitle', true)):?>
-				<h2 class="page_subtitle"><?= get_post_meta($post->ID, 'subtitle', true); ?></h2>
-			<?php else: ?>
-				<h2 class="page_subtitle"><?php bloginfo( 'description' ); ?></h2>
-			<?php endif; ?>
-
-		<?php elseif ( is_page() ): ?>
-			<h1 class="page_title"><?= single_post_title() ?></h1>
-			<?php if (get_post_meta($post->ID, 'subtitle', true)):?>
-				<h2 class="page_subtitle"><?= get_post_meta($post->ID, 'subtitle', true); ?></h2>
-			<?php else: ?>
-				<h2 class="page_subtitle"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-			<?php endif; ?>
-
-		<?php elseif ( is_attachment() ): ?>
-			<h1 class="page_title">Media <?= single_post_title() ?></h1>
-			<h2 class="page_subtitle"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-
-		<?php elseif ( is_single() ): ?>
-			<h1 class="page_title"><?= single_post_title() ?></h1>
-			<?php if (get_post_meta($post->ID, 'subtitle', true)):?>
-				<h2 class="page_subtitle"><?= get_post_meta($post->ID, 'subtitle', true); ?></h2>
-			<?php else: ?>
-				<h2 class="page_subtitle"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-			<?php endif; ?>
-
-		<?php elseif ( is_404() ): ?>
-			<h1 class="page_title" style="display: inline;">404 Not Found</h1> <span style="font-size: 2.5em;">😱</span>
-			<h2>Aucune page n'a été trouvée à cette adresse...</h2>
-
-		<?php elseif ( is_search() ): ?>
-			<h1 class="page_title">Résultats pour la recherche : "<?= get_search_query(); ?>"</h1>
-			<h2><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-
-		<?php elseif ( is_home() ): ?>
-			<h1 class="page_title"><?= single_post_title() ?></h1>
-			<?php if (get_post_meta($post->ID, 'subtitle', true)):?>
-				<h2 class="page_subtitle"><?= get_post_meta($post->ID, 'subtitle', true); ?></h2>
-			<?php else: ?>
-				<h2 class="page_subtitle"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-			<?php endif; ?>
-
-		<?php else : ?>
-			<h1 class="page_title"><?= single_post_title() ?></h1>
-			<h2 class="page_title"><a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-		<?php endif; ?>
-
-
-		<nav id="site-navigation" class="navbar">
-
-			<?php if (has_nav_menu('navbar-menu')):		
-				$wrap  = '<ul id="%1$s" class="%2$s">';		// Open <ul> menu
-
-				if (get_theme_mod( 'custom_logo' ))
-				{
+				if (get_theme_mod( 'mywpstartertheme__theme_options__navbar__logo--show', true ) && get_theme_mod( 'custom_logo' )) {
+					
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
-					$custom_logo_url = wp_get_attachment_image_src( $custom_logo_id , 'medium' )[0];
-					$custom_logo_meta = get_post_meta($custom_logo_id, '_wp_attachment_image_alt', TRUE);
 
-					$link_id = 'id="primary-menu__custom_logo"';
-					$img_tag .= '<img src="' . $custom_logo_url . '" alt="' . $custom_logo_meta . '"> </a></li>';	// Add image to home item, if there is custom logo set
+					$custom_logo__img_url = wp_get_attachment_url($custom_logo_id);
+
+					$custom_logo__img_meta = get_post_meta($custom_logo_id, '_wp_attachment_image_alt', true);
+
+					$custom_logo__link;
+
+					switch (get_theme_mod('mywpstartertheme__theme_options__navbar__logo__link', 'site-url')) {
+						case 'site-url':
+							$custom_logo__link = get_site_url();
+						break;
+
+						case 'blog-url':
+							$custom_logo__link = get_home_url();
+						break;
+						
+						case 'none':
+							$custom_logo__link = '';
+						break;
+
+						default:
+							$custom_logo__link = get_site_url();
+						break;
+					}
+
+					// TODO: add an input for that
+					$custom_logo__link_text = __('Return to home', 'mywpstartertheme');
+
+					
+					$custom_logo__html_markup = "<li id=\"menu-item-0\" class=\"menu-item menu-item-0 menu-item-custom-logo\">" .
+																				"<img src=\"$custom_logo__img_url\" alt=\"$custom_logo__img_meta\">" .
+																				"<a href=\"$custom_logo__link\">$custom_logo__link_text</a>" .
+																			"</li>";
+
+					$navbar__menu = wp_nav_menu( array(
+								'menu_class'        => 'main-navigation__menu',
+								'container'         => false,
+								'theme_location'    => 'navbar',
+								'echo'							=> false,
+								'walker'						=> new Add_Element_Walker($custom_logo__html_markup, 0),
+					));
+
+					echo $navbar__menu;
+				} else {
+					wp_nav_menu( array(
+						'menu_class'        => 'main-navigation__menu',
+						'container'         => false,
+						'theme_location'    => 'navbar',
+						'walker'						=> new Cleanup_Menu_Walker,
+					));
 				}
 
-				$wrap .= '<li><a ' . $link_id . ' href="' . esc_url( home_url( '/' ) ) . '" rel="home">Accueil</a>' . $img_tag . '</li>';	// Close home item
-				
-				$wrap .= '%3$s';	// Add WordPress items (configured in /wp-admin/)
-				$wrap .= '</ul>';	// Close the <ul> menu
+				if(get_theme_mod( 'mywpstartertheme__theme_options__navbar__search--show', true )) {
+					get_search_form();
+				}
+				?>
+				<label id="site-navigation__burger-menu__icon" for="site-navigation__burger-menu__checkbox">
+					<span class="color--accent-background"></span>
+					<span class="color--accent-background"></span>
+					<span class="color--accent-background"></span>
+					<span class="color--accent-background"></span>
+				</label>
+				<?php
 
-				// Generate the menu
-				wp_nav_menu( array(
-					'theme_location'	=>	'navbar-menu',
-					'menu_id'			=>	'primary-menu',
-					'container'			=>	false,
-					'items_wrap'		=>	$wrap
-				));
-			endif; ?>
+			} else {
 
-			<?= get_search_form() ?>
+					if (get_theme_mod( 'mywpstartertheme__theme_options__navbar__logo--show', true ) && get_theme_mod( 'custom_logo' )) {
+						
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
 
-			<label id="site-navigation__burger_menu__icon" for="site-navigation__burger_menu__checkbox">
-				<span style="background-color: black"></span>
-				<span style="background-color: black"></span>
-				<span style="background-color: black"></span>
-			</label>
-			<input type="checkbox" name="site-navigation__burger_menu__checkbox" id="site-navigation__burger_menu__checkbox"/>
-		</nav>
+						$custom_logo__img_url = wp_get_attachment_url($custom_logo_id);
 
+						$custom_logo__img_meta = get_post_meta($custom_logo_id, '_wp_attachment_image_alt', true);
+
+						$custom_logo__link;
+
+						switch (get_theme_mod('mywpstartertheme__theme_options__navbar__logo__link', 'site-url')) {
+							case 'site-url':
+								$custom_logo__link = get_site_url();
+							break;
+
+							case 'blog-url':
+								$custom_logo__link = get_home_url();
+							break;
+							
+							case 'none':
+								$custom_logo__link = '';
+							break;
+
+							default:
+								$custom_logo__link = get_site_url();
+							break;
+						}
+
+						// TODO: add an input for that
+						$custom_logo__link_text = __('Return to home', 'mywpstartertheme');
+
+						
+						$custom_logo__html_markup = "<ul id=\"menu-navbar\" class=\"main-navigation__menu\">" .
+																					"<li id=\"menu-item-0\" class=\"menu-item menu-item-0 menu-item-custom-logo\">" .
+																						"<img src=\"$custom_logo__img_url\" alt=\"$custom_logo__img_meta\">" .
+																						"<a href=\"$custom_logo__url\">$custom_logo__url_text</a>" .
+																					"</li>" .
+																				"</ul>";
+
+						echo $custom_logo__html_markup;
+					}
+
+					if(get_theme_mod( 'mywpstartertheme__theme_options__navbar__search--show', true )) {
+						get_search_form();
+					}
+				}
+					?>
+					</nav>
 		<?php
-			// if there is no thumbnail for this post, get header image id
-			$header_img_id = (get_post_thumbnail_id() == "") ? attachment_url_to_postid(get_theme_mod('header_image')) : get_post_thumbnail_id();
-
-			// If the ID is 0 it is possible that it's because the header image is random.
-			// Donc SI l'ID est 0 alors on récupère une image d'entête aléatoire SINON 
-			$header_img_url = ($header_img_id == 0) ? get_random_header_image() : wp_get_attachment_image_src( $header_img_id , 'medium' )[0];
-
-			$header_img_meta = get_post_meta($header_img_id, '_wp_attachment_image_alt', TRUE);
-
-			if ($header_img_url != ""):
-		?>			
-		<div id="masthead__hero_container">
-				<img src="<?= $header_img_url ?>" alt="<?= $header_img_meta ?>">
-			</div>
-		<?php endif; ?>
+		}
+		?>
 
 
-<?php if ($is_localhost) : ?>
-	<!-- header template : header.php - END -->
 <?php if (is_localhost()): ?>
 	<!-- Header Template : header.php - END -->
 <?php endif; ?>
