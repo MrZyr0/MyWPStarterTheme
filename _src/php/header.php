@@ -187,4 +187,6 @@ if (is_localhost()) {
 
 <?php if ($is_localhost) : ?>
 	<!-- header template : header.php - END -->
+<?php if (is_localhost()): ?>
+	<!-- Header Template : header.php - END -->
 <?php endif; ?>

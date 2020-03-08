@@ -12,12 +12,17 @@
 
 if ($is_localhost) :
 	echo '<!-- page template : page.php - START -->';
+
+if (is_localhost()) :
+	echo '<!-- Page Template : page.php - START -->';
 endif;
 
 get_header();
 
 if ($is_localhost) :
 	echo '<!-- page template : page.php - CONTENT -->';
+if (is_localhost()) :
+	echo '<!-- Page Template : page.php - CONTENT-start -->';
 endif;
 ?>
 
@@ -47,4 +52,5 @@ get_footer();
 
 if ($is_localhost) :
 	echo '<!-- page template : page.php - END -->';
+	echo '<!-- Page Template : page.php - END -->';
 endif;
