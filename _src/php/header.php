@@ -6,13 +6,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package MyWPStarterTheme
+ * @package mywpstartertheme
  */
 
-$is_localhost = ( $_SERVER['REMOTE_ADDR'] == "127.0.0.1" or $_SERVER['REMOTE_ADDR'] == "::1" );
-if ($is_localhost) :?>
-	<!-- header template : header.php - START -->
-<?php endif; ?>
+if (is_localhost()) {
+	echo '<!-- Header Template : header.php - START -->';
+} ?>
 
 
 <!DOCTYPE html>

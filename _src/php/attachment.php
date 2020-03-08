@@ -5,6 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package MyWPStarterTheme
+ * @package mywpstartertheme
  */
 
 get_header();

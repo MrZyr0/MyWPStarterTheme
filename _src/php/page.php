@@ -7,6 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-page
  *
  * @package MyWPStarterTheme
+ * @package mywpstartertheme
  */
 
 if ($is_localhost) :
