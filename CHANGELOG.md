@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Change architecture to Twenty Twenty solution (regroup fonts + imgs + js + css into a `dist` or `assets` folder; READ: <https://stackoverflow.com/questions/22842691/what-is-the-meaning-of-the-dist-directory-in-open-source-projects/#answer-22844164>)
   - Apply phpdoc (READ: <http://phpdocu.sourceforge.net/howto.php>)
 - Apply / configure `WordPress Coding Standards`
+- Fix navigation bar (use @extends for duplicate properties)
 - Check all theme in my local "model" WP for interesting code
 - Fix all TODOs presents in sources
 - Add detection of prod/preprod and control to change WP bar color based on it
