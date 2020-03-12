@@ -368,6 +368,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - [JB Audras's plugins](https://github.com/audrasjb?tab=repositories)
 - [Quality Web Checklist](https://wordpress.org/plugins/quality-checklist-opquast/)
 - [A good mega menu](https://www.megamenu.com/)
+- [User history](https://simple-history.com/)
 
 
 &nbsp; <!-- break line -->
