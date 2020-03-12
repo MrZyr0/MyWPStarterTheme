@@ -473,6 +473,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [CSS selectors cheat sheet](https://gist.github.com/magicznyleszek/809a69dd05e1d5f12d01)
 - [Lando, docker's WP environnement](https://github.com/lando/lando)
 - [Ultimate docs for a11y](https://a11yproject.com)
+- [Detective Wapuu - Analyse Gutemberg bloc used in a page](https://richtabor.com/detective-wapuu/)
 
 ### Books
 
