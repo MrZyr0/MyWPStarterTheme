@@ -4,6 +4,7 @@
 /**************/
 // TODO: optimize action by searching when actions are added to delete them directly after and at the right time
 // TODO: add control to manage cleaning (create a plugin for that)
+// TODO: add auto '/wp-admin/options-discussion.php' configuration & remove the page to the menu
 
 
 /**
