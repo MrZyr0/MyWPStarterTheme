@@ -107,6 +107,7 @@ function mywpstartertheme_customizer__register( $wp_customize ) {
 	 * display_header_text
 	*/
 
+	// TODO: Add the possibility to resize the image of the site's icon while respecting the square ratio)
 	$wp_customize->remove_control('header_text');
 	$wp_customize->remove_control('display_header_text');
 
