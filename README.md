@@ -475,6 +475,8 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Lando, docker's WP environnement](https://github.com/lando/lando)
 - [Ultimate docs for a11y](https://a11yproject.com)
 - [Detective Wapuu - Analyse Gutemberg bloc used in a page](https://richtabor.com/detective-wapuu/)
+- [A large list of the most known and interesting plugins to test](https://wpstarterpack.com/full-list/)\
+  **⚠ Don't take this pack because it's grey market or at your own risk ⚠**
 
 ### Books
 
