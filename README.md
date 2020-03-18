@@ -369,6 +369,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - [Quality Web Checklist](https://wordpress.org/plugins/quality-checklist-opquast/)
 - [A good mega menu](https://www.megamenu.com/)
 - [User history](https://simple-history.com/)
+- [Decalog - A usefull logger connectable to Slack](https://wordpress.org/plugins/decalog/)
 
 
 &nbsp; <!-- break line -->
