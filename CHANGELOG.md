@@ -78,6 +78,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Check aria-label markup
 - Embded this project into a WordPress docker
 - Try to use Timber
+- [Add script fallbacks for svg](https://css-tricks.com/a-complete-guide-to-svg-fallbacks/)
 
 
 &nbsp; <!-- break line -->
