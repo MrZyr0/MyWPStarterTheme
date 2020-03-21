@@ -51,3 +51,6 @@ function burger_menu_toogle(event) {
 		node__label.textContent = 'Navigation toggle: menu closed';
 	}
 }
+
+// Use add event listener for link function to html with class
+// Refer to https://github.com/MaxenceMottard/script-style-starter
