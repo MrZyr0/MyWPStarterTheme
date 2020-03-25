@@ -479,6 +479,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [A large list of the most known and interesting plugins to test](https://wpstarterpack.com/full-list/)\
   **⚠ Don't take this pack because it's grey market or at your own risk ⚠**
 - [Many premium plugins for development and education only](https://freethub.com)
+- [Another WP Repository](https://wphive.com)
 
 ### Books
 
