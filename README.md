@@ -481,6 +481,8 @@ Here are some interesting sources and documentations that can help or inspire fo
   **⚠ Don't take this pack because it's grey market or at your own risk ⚠**
 - [Many premium plugins for development and education only](https://freethub.com)
 - [Another WP Repository](https://wphive.com)
+- [Search engine to search in source code of WP plugins](https://wpdirectory.net/)
+_use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Learn WP Security](https://learnwpsecurity.com/)
 
 ### Books
