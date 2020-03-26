@@ -451,7 +451,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [WP for dummies **:fr:**](https://www.wppourlesnuls.com/)
 - [Another cool WP blog **:fr:**](https://wabeo.fr/blog/)
 
-### Tools / Documentation
+### Tools / Documentation / Learning
 
 - [START HERE: WordPress configuration to dev theme](https://developer.wordpress.org/themes/basics/theme-functions/)
 - [WP Glossary](https://www.wpglossary.net/)
@@ -481,6 +481,7 @@ Here are some interesting sources and documentations that can help or inspire fo
   **⚠ Don't take this pack because it's grey market or at your own risk ⚠**
 - [Many premium plugins for development and education only](https://freethub.com)
 - [Another WP Repository](https://wphive.com)
+- [Learn WP Security](https://learnwpsecurity.com/)
 
 ### Books
 
