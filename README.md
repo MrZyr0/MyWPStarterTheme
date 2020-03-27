@@ -507,3 +507,4 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Tide - quality & test code analysis](https://www.wptide.org/)
 - [Improve prod/preprod media uploads plugin](https://github.com/BeAPI/prod-images)
 - [Official WordPress make's slack](https://make.wordpress.org/chat/)
+- [Interesting infography of Web skills & tools](https://andreasbm.github.io/web-skills/)
