@@ -484,6 +484,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Search engine to search in source code of WP plugins](https://wpdirectory.net/)
 _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Learn WP Security](https://learnwpsecurity.com/)
+- [Interesting CSS variable tuto](https://youtu.be/rXuHGLzSmSE)
 
 ### Books
 
