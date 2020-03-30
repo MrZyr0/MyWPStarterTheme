@@ -487,6 +487,8 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Learn WP Security](https://learnwpsecurity.com/)
 - [Interesting CSS variable tuto](https://youtu.be/rXuHGLzSmSE)
 - [SVG fallback](https://css-tricks.com/a-complete-guide-to-svg-fallbacks/)
+<!-- TODO: Create a script to resize image to keep ratio on ie -->
+- [Calc real dimensions of images with JS](https://css-tricks.com/measuring-image-widths-javascript-carefully/)
 
 ### Books
 
