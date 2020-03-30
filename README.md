@@ -371,6 +371,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - [A good mega menu](https://www.megamenu.com/)
 - [User history](https://simple-history.com/)
 - [Decalog - A usefull logger connectable to Slack](https://wordpress.org/plugins/decalog/)
+- [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
 
 
 &nbsp; <!-- break line -->
