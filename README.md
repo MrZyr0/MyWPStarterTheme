@@ -489,6 +489,7 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [SVG fallback](https://css-tricks.com/a-complete-guide-to-svg-fallbacks/)
 <!-- TODO: Create a script to resize image to keep ratio on ie -->
 - [Calc real dimensions of images with JS](https://css-tricks.com/measuring-image-widths-javascript-carefully/)
+- [Interesting hosting](https://www.getshifter.io)
 
 ### Books
 
