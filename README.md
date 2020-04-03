@@ -490,6 +490,7 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 <!-- TODO: Create a script to resize image to keep ratio on ie -->
 - [Calc real dimensions of images with JS](https://css-tricks.com/measuring-image-widths-javascript-carefully/)
 - [Interesting hosting](https://www.getshifter.io)
+- [An alternative to Local by Flywheel](https://www.stackabl.io/)
 
 ### Books
 
