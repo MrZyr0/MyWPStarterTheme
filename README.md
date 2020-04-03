@@ -491,6 +491,7 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Calc real dimensions of images with JS](https://css-tricks.com/measuring-image-widths-javascript-carefully/)
 - [Interesting hosting](https://www.getshifter.io)
 - [An alternative to Local by Flywheel](https://www.stackabl.io/)
+- [All about translation :fr:](https://21douze.fr/traduction-wordpress-vous-faites-fausse-route-8518.html)
 
 ### Books
 
