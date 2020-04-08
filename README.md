@@ -516,3 +516,4 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Improve prod/preprod media uploads plugin](https://github.com/BeAPI/prod-images)
 - [Official WordPress make's slack](https://make.wordpress.org/chat/)
 - [Interesting infography of Web skills & tools](https://andreasbm.github.io/web-skills/)
+- [css layout paterns](https://csslayout.io/patterns/)
