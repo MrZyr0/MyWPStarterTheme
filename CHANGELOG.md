@@ -80,6 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Try to use Timber
 - [Add script fallbacks for svg](https://css-tricks.com/a-complete-guide-to-svg-fallbacks/)
 - Upload modules in gists
+- Add this usefull function : READ: <https://gist.github.com/mi-ca/868ca24a31eada03a5807d4100d75038>
 
 &nbsp; <!-- break line -->
 
