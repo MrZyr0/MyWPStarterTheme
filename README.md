@@ -373,6 +373,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - [User history](https://simple-history.com/)
 - [Decalog - A usefull logger connectable to Slack](https://wordpress.org/plugins/decalog/)
 - [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
+- [Easy live testing for theme](https://wordpress.org/plugins/wp-theme-test/)
 
 
 &nbsp; <!-- break line -->
