@@ -519,3 +519,4 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Official WordPress make's slack](https://make.wordpress.org/chat/)
 - [Interesting infography of Web skills & tools](https://andreasbm.github.io/web-skills/)
 - [css layout paterns](https://csslayout.io/patterns/)
+- [CSS tricks](https://twitter.com/AllThingsSmitty/status/1254151507412496384)
