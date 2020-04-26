@@ -334,6 +334,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [HTTP Header](https://wordpress.org/plugins/http-headers/)
   - [HTTP Security](https://wordpress.org/plugins/http-security/)
   - [WP Security Audit Log](https://wordpress.org/plugins/wp-security-audit-log/)
+  - [Decalog - Powerfull logs](https://wordpress.org/plugins/decalog/)
 
 - **Search Engine Optimization (SEO):**
   - [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/)
