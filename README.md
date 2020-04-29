@@ -289,6 +289,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Stackable Ultimate Gutenberg Blocks](https://wordpress.org/plugins/stackable-ultimate-gutenberg-blocks/)
   - [Grids: Layout builder for WordPress](https://wordpress.org/plugins/grids/)
   - [Reusable Blocks Re-Extended](https://github.com/AmphiBee/Reusable-Blocks-Re-Extended)
+  - [Multiple blocks for page building](https://getwid.getmotopress.com/)
 
 - **Analytics:**
   - [Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP)](https://wordpress.org/plugins/google-analytics-dashboard-for-wp/)
