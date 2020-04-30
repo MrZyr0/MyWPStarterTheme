@@ -276,6 +276,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - <https://www.userlike.com>
   - <https://www.helpscout.com>
   - <https://www.tidio.com>
+  - [Plugin: Tawkto live chat](https://wordpress.org/plugins/tawkto-live-chat/)
 
 - **Gutemberg:**
   - [Coblocks](https://wordpress.org/plugins/coblocks/)
@@ -303,11 +304,13 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Cookie Notice for GDPR & CCPA](https://wordpress.org/plugins/cookie-notice/)
   - [GDPR Cookie Consent](https://wordpress.org/plugins/cookie-law-info/)
   - [GDPR Complianz](https://wordpress.org/plugins/complianz-gdpr/)
+  - [Mention legales - generator plugin](https://wordpress.org/plugins/mentions-legales/)
 
-- **Database optimizer:**
+- **Database optimizer & cleaners:**
   - [WP Sweep](https://wordpress.org/plugins/wp-sweep/)
   - [WPS Cleaner](https://wordpress.org/plugins/wps-cleaner/)
   - [WP Optimize](https://wordpress.org/plugins/wp-optimize/) _=> usefull for automation ?_
+  - [Shortcode Cleaner Lite](https://wordpress.org/plugins/shortcode-cleaner-lite/)
 
 - **Generating "legal notice":**
   - <https://www.subdelirium.com/generateur-de-mentions-legales/> **:fr:**
@@ -376,6 +379,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - [Decalog - A usefull logger connectable to Slack](https://wordpress.org/plugins/decalog/)
 - [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
 - [Easy live testing for theme](https://wordpress.org/plugins/wp-theme-test/)
+- [User admin simplifier](https://wordpress.org/plugins/user-admin-simplifier/)
 
 
 &nbsp; <!-- break line -->
