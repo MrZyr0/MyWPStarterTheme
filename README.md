@@ -380,6 +380,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
 - [Easy live testing for theme](https://wordpress.org/plugins/wp-theme-test/)
 - [User admin simplifier](https://wordpress.org/plugins/user-admin-simplifier/)
+- [WP YouTube Lyte - Speed up emded YT loading !](https://wordpress.org/plugins/wp-youtube-lyte/)
 
 
 &nbsp; <!-- break line -->
