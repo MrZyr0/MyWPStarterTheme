@@ -330,16 +330,18 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Very Simple Contact Form](https://wordpress.org/plugins/very-simple-contact-form/)
   - [WPForms](https://wordpress.org/plugins/wpforms-lite/)
 
-- **Accessible video players:**
+- **Accessibility:**
   - [Ableplayer](https://ableplayer.github.io/ableplayer/)
   - [Ozplayer](https://github.com/accessibilityoz/ozplayer-wordpress)
+  - [WP Accessibility Helper (WAH)](https://wordpress.org/plugins/wp-accessibility-helper/)
 
 - **Security:**
   - [HTTP Header](https://wordpress.org/plugins/http-headers/)
   - [HTTP Security](https://wordpress.org/plugins/http-security/)
   - [WP Security Audit Log](https://wordpress.org/plugins/wp-security-audit-log/)
-  - [Decalog - Powerfull logs](https://wordpress.org/plugins/decalog/)
+  - [Decalog - A usefull logger connectable to Slack](https://wordpress.org/plugins/decalog/)
   - [Activity Log](https://wordpress.org/plugins/aryo-activity-log/)
+  - [Disable REST API](https://wordpress.org/plugins/disable-json-api/)
 
 - **Search Engine Optimization (SEO):**
   - [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/)
@@ -351,37 +353,41 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [SmartCrawl](https://wordpress.org/plugins/smartcrawl-seo/)
   - [Rank Math](https://wordpress.org/plugins/seo-by-rank-math/)
   - [Future sitemap generation plugin integrated in core](https://wordpress.org/plugins/core-sitemaps/)
+  - [Rank Math - Optimize content for SEO](https://rankmath.com)
+  - [Linkbuildr - automates links to the people you talk about in your article](https://wordpress.org/plugins/linkbuildr/)
+  - [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
+  - [WP 410 - Add 410 support](https://wordpress.org/plugins/wp-410/)
 
 - **Loading optimization:**
   - [Asset CleanUp : Page Speed Booster - Manage style & script loading](https://wordpress.org/plugins/wp-asset-clean-up/)
   - [Plugin Load Filter](https://wordpress.org/plugins/plugin-load-filter/)
   - [Plugin Organizer](https://wordpress.org/plugins/plugin-organizer/)
+  - [Cloudflare page cache](https://wordpress.org/plugins/cloudflare-page-cache/)
+  
+- **Customization:**
+  - [WP Admin UI - Customize WP Backoffice](https://wordpress.org/plugins/wp-admin-ui/)
+  - [Contextual Adminbar Color](https://github.com/JulioPotier/contextual-adminbar-color)
+  - [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
 
-- [WP Admin UI - Customize WP Backoffice](https://wordpress.org/plugins/wp-admin-ui/)
-- [WP Control - Log CRON tasks](https://wordpress.org/plugins/wp-crontrol/)
-- [Archived Post Status](https://wordpress.org/plugins/archived-post-status/)
-- [Cloudflare page cache](https://wordpress.org/plugins/cloudflare-page-cache/)
-- [Rank Math - Optimize content for SEO](https://rankmath.com)
-- [WP Accessibility Helper (WAH)](https://wordpress.org/plugins/wp-accessibility-helper/)
-- [Pods - Interesting lternative to ACF](https://wordpress.org/plugins/pods/)
-- [Linkbuildr - automates links to the people you talk about in your article](https://wordpress.org/plugins/linkbuildr/)
-- [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
-- [WP 410 - Add 410 support](https://wordpress.org/plugins/wp-410/)
-- [Contextual Adminbar Color](https://github.com/JulioPotier/contextual-adminbar-color)
-- [WP Easy Backup - Backup WP](https://github.com/JulioPotier/Wp-Easy-Backup)
-- [WPUtilities - repo with some plugins to test](https://github.com/JulioPotier/WPUtilities)
-- [Jetpack](https://wordpress.org/plugins/jetpack/)
-- [Post Thumbnail Editor](https://wordpress.org/plugins/post-thumbnail-editor/)
-- [Safe SVG](https://wordpress.org/plugins/safe-svg/)
-- [JB Audras's plugins](https://github.com/audrasjb?tab=repositories)
-- [Quality Web Checklist](https://wordpress.org/plugins/quality-checklist-opquast/)
-- [A good mega menu](https://www.megamenu.com/)
-- [User history](https://simple-history.com/)
-- [Decalog - A usefull logger connectable to Slack](https://wordpress.org/plugins/decalog/)
-- [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
-- [Easy live testing for theme](https://wordpress.org/plugins/wp-theme-test/)
-- [User admin simplifier](https://wordpress.org/plugins/user-admin-simplifier/)
-- [WP YouTube Lyte - Speed up emded YT loading !](https://wordpress.org/plugins/wp-youtube-lyte/)
+- 
+- **Tools:**
+  - [WP Control - Log CRON tasks](https://wordpress.org/plugins/wp-crontrol/)
+  - [Safe SVG](https://wordpress.org/plugins/safe-svg/)
+  
+- **Others:**
+  - [Archived Post Status](https://wordpress.org/plugins/archived-post-status/)
+  - [Pods - Interesting lternative to ACF](https://wordpress.org/plugins/pods/)
+  - [WP Easy Backup - Backup WP](https://github.com/JulioPotier/Wp-Easy-Backup)
+  - [WPUtilities - repo with some plugins to test](https://github.com/JulioPotier/WPUtilities)
+  - [Jetpack](https://wordpress.org/plugins/jetpack/)
+  - [Post Thumbnail Editor](https://wordpress.org/plugins/post-thumbnail-editor/)
+  - [JB Audras's plugins](https://github.com/audrasjb?tab=repositories)
+  - [Quality Web Checklist](https://wordpress.org/plugins/quality-checklist-opquast/)
+  - [A good mega menu](https://www.megamenu.com/)
+  - [User history](https://simple-history.com/)
+  - [Easy live testing for theme](https://wordpress.org/plugins/wp-theme-test/)
+  - [User admin simplifier](https://wordpress.org/plugins/user-admin-simplifier/)
+  - [WP YouTube Lyte - Speed up emded YT loading !](https://wordpress.org/plugins/wp-youtube-lyte/)
 
 
 &nbsp; <!-- break line -->
