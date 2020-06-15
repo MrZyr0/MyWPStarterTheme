@@ -371,10 +371,19 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Contextual Adminbar Color](https://github.com/JulioPotier/contextual-adminbar-color)
   - [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
 
-- 
+
 - **Tools:**
   - [WP Control - Log CRON tasks](https://wordpress.org/plugins/wp-crontrol/)
   - [Safe SVG](https://wordpress.org/plugins/safe-svg/)
+
+- **Page builders**
+  - [Page Builder: KingComposer – Free Drag and Drop page builder by King-Theme](https://wordpress.org/plugins/kingcomposer/)
+  - [Visual Composer Website Builder](https://wordpress.org/plugins/visualcomposer/)
+  - [WPBakery Page Builder](https://wpbakery.com/)
+  - [Oxygen Builder](https://oxygenbuilder.com/)
+  - [Elementor](https://wordpress.org/plugins/elementor/)
+  - [WordPress Page Builder – Beaver Builder](https://wordpress.org/plugins/beaver-builder-lite-version/)
+  - [Bicks Page Builder](https://bricksbuilder.io/)
   
 - **Others:**
   - [Archived Post Status](https://wordpress.org/plugins/archived-post-status/)
