@@ -292,6 +292,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Reusable Blocks Re-Extended](https://github.com/AmphiBee/Reusable-Blocks-Re-Extended)
   - [Multiple blocks for page building](https://getwid.getmotopress.com/)
   - [SimpLy Gallery Blocks](https://wordpress.org/plugins/simply-gallery-block/)
+  - [Gutenberg Blocks – Ultimate Addons for Gutenberg](https://wordpress.org/plugins/ultimate-addons-for-gutenberg/)
 
 - **Analytics:**
   - [Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP)](https://wordpress.org/plugins/google-analytics-dashboard-for-wp/)
