@@ -478,6 +478,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [SEOmix - WP spécific articles **:fr:**](https://www.seomix.fr/wordpress/)
 - [WP for dummies **:fr:**](https://www.wppourlesnuls.com/)
 - [Another cool WP blog **:fr:**](https://wabeo.fr/blog/)
+- [Themeisle](https://themeisle.com)
 
 ### Tools / Documentation / Learning
 
