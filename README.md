@@ -384,6 +384,8 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Elementor](https://wordpress.org/plugins/elementor/)
   - [WordPress Page Builder – Beaver Builder](https://wordpress.org/plugins/beaver-builder-lite-version/)
   - [Bicks Page Builder](https://bricksbuilder.io/)
+  - [Brizy](https://www.brizy.io/)
+  - [Cornerstone - Theme.co's pages builder](https://theme.co/cornerstone)
   
 - **Others:**
   - [Archived Post Status](https://wordpress.org/plugins/archived-post-status/)
