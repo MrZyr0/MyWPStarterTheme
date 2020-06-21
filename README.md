@@ -375,6 +375,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
 - **Tools:**
   - [WP Control - Log CRON tasks](https://wordpress.org/plugins/wp-crontrol/)
   - [Safe SVG](https://wordpress.org/plugins/safe-svg/)
+  - [HappyFile - WP media manager](https://happyfiles.io)
 
 - **Page builders**
   - [Page Builder: KingComposer – Free Drag and Drop page builder by King-Theme](https://wordpress.org/plugins/kingcomposer/)
