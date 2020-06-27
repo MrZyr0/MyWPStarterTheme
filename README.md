@@ -402,6 +402,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Easy live testing for theme](https://wordpress.org/plugins/wp-theme-test/)
   - [User admin simplifier](https://wordpress.org/plugins/user-admin-simplifier/)
   - [WP YouTube Lyte - Speed up emded YT loading !](https://wordpress.org/plugins/wp-youtube-lyte/)
+  - [Change the style of WP BO](https://admintwentytwenty.com/fr)
 
 
 &nbsp; <!-- break line -->
