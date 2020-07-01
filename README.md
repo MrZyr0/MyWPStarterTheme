@@ -277,6 +277,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - <https://www.helpscout.com>
   - <https://www.tidio.com>
   - [Plugin: Tawkto live chat](https://wordpress.org/plugins/tawkto-live-chat/)
+  - [Small CHAT - Slack on websites](https://small.chat)
 
 - **Gutemberg:**
   - [Coblocks](https://wordpress.org/plugins/coblocks/)
