@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Apply phpdoc (READ: <http://phpdocu.sourceforge.net/howto.php>)
   - Add & refactor namespace with text domain (READ: <https://www.ibenic.com/php-namespaces-wordpress-plugins>) 
 - Apply / configure `WordPress Coding Standards`
+- Add control for CSS breakpoints
+- Add humans.txt virtual page by getting infos in style.css file [view official Website for implementation](http://humanstxt.org/)
 - Fix navigation bar (use @extends for duplicate properties)
 - Check all theme in my local "model" WP for interesting code
 - Fix all TODOs presents in sources
