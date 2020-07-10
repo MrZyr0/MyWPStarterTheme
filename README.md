@@ -404,6 +404,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [User admin simplifier](https://wordpress.org/plugins/user-admin-simplifier/)
   - [WP YouTube Lyte - Speed up emded YT loading !](https://wordpress.org/plugins/wp-youtube-lyte/)
   - [Change the style of WP BO](https://admintwentytwenty.com/fr)
+  - [Duplicator – WordPress Migration Plugin](https://wordpress.org/plugins/duplicator/)
 
 
 &nbsp; <!-- break line -->
