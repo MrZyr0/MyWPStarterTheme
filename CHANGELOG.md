@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix navigation bar (use @extends for duplicate properties)
 - Check all theme in my local "model" WP for interesting code
 - Fix all TODOs presents in sources
+- Impriove outline with: `outline: -webkit-focus-ring-color auto 1px;` or an outline bi color white & black like the outline used by Cozy Pass
 - Add detection of prod/preprod and control to change WP bar color based on it
 - Optimize HTML sementic by apply `rel` attribute (READ: <https://www.alsacreations.com/article/lire/1400-attribut-rel-relations.html> **:fr:**)
 - Add accesskey parameter to menu & usefull links (RED: <https://www.w3schools.com/tags/att_global_accesskey.asp>)
