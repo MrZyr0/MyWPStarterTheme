@@ -378,6 +378,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [WP Control - Log CRON tasks](https://wordpress.org/plugins/wp-crontrol/)
   - [Safe SVG](https://wordpress.org/plugins/safe-svg/)
   - [HappyFile - WP media manager](https://happyfiles.io)
+  - [Sanitize Accented Uploads](https://github.com/devgeniem/wp-sanitize-accented-uploads)
 
 - **Page builders**
   - [Page Builder: KingComposer – Free Drag and Drop page builder by King-Theme](https://wordpress.org/plugins/kingcomposer/)
@@ -468,6 +469,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Gutemberg Template Library](https://gutenberghub.com/introducing-gutenberg-templates-library/)
 - [Google's image optimizations article](https://developers.google.com/web/tools/lighthouse/audits/optimize-images)
 - [Talk about HTML markup](https://html.com/semantic-markup/)
+- [Sanitize accents on uploads **:fr:**](https://wpchannel.com/wordpress/tutoriels-wordpress/renommer-automatiquement-fichiers-accentues-wordpress/)
 
 ### Blogs
 
