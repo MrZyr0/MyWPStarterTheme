@@ -294,6 +294,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Multiple blocks for page building](https://getwid.getmotopress.com/)
   - [SimpLy Gallery Blocks](https://wordpress.org/plugins/simply-gallery-block/)
   - [Gutenberg Blocks – Ultimate Addons for Gutenberg](https://wordpress.org/plugins/ultimate-addons-for-gutenberg/)
+  - [Block navigation](https://wordpress.org/plugins/block-navigation/)
 
 - **Analytics:**
   - [Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP)](https://wordpress.org/plugins/google-analytics-dashboard-for-wp/)
