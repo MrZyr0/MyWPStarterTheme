@@ -488,6 +488,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [WP for dummies **:fr:**](https://www.wppourlesnuls.com/)
 - [Another cool WP blog **:fr:**](https://wabeo.fr/blog/)
 - [Themeisle](https://themeisle.com)
+- [Misha Rudrastyh's blog](https://rudrastyh.com/)
 
 ### Tools / Documentation / Learning
 
