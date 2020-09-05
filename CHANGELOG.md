@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Fix `gulp-uglify`
 - Refactor the project
   - Change to oriented object programming (create class when it's usefull)
   - Separate the theme's functionalities into modules
