@@ -5,14 +5,14 @@ const gulp_sass = require('gulp-sass'); // Sass compilation
 const gulp_cleanCSS = require('gulp-clean-css'); // Optimize CSS
 const gulp_sass_glob = require('gulp-sass-glob'); // Glob sass (support * import)
 const gulp_prefixer = require('gulp-autoprefixer'); // Prefix CSS for compatibilities issues
-const gulp_uglify = require('gulp-uglify'); // Optimize JS
+// const gulp_uglify = require('gulp-uglify'); // Optimize JS (not support ES6 ! Need to use TerserPlugin TODO: replace gulp by webpack)
 const gulp_imagemin = require('gulp-imagemin'); // Optimize .gif .png .svg images
 const imageminJpegoptim = require('imagemin-jpegoptim'); // Optimize .jpg & .jpeg images
 const imageminMozjpeg = require('imagemin-mozjpeg'); // Optimize .jpg & .jpeg images
 const browserSync = require('browser-sync').create(); // Sync multiple browsers & auto refresh naviguator on save
 const del = require('del'); // Delete files before optimizations
 
-const browserLink = 'http://mywpstartertheme.local/';
+const browserLink = 'http://localhost:10004/';
 const browserPort = 3030;
 const srcFolder = './_src';
 const publicFolder = '.';
@@ -140,7 +140,7 @@ function scriptProd() {
 	return gulp
 		.src(srcJS)
 		.pipe(gulp_include())
-		.pipe(gulp_uglify())
+		// .pipe(gulp_uglify())
 		.pipe(gulp.dest(publicScriptFolder));
 }
 
