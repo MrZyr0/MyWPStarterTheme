@@ -86,6 +86,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upload modules in gists
 - Add this usefull function : READ: <https://gist.github.com/mi-ca/868ca24a31eada03a5807d4100d75038>
 - Add some new debug option `define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true );`
+- Add option to display link to the author in the footer but in nofollow
 
 &nbsp; <!-- break line -->
 
