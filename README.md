@@ -490,6 +490,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Themeisle](https://themeisle.com)
 - [Misha Rudrastyh's blog](https://rudrastyh.com/)
 - [WPexplorer's blog](https://www.wpexplorer.com/blog/)
+- [Free & Paid WP Courses, tutorials & articles](https://wpshout.com/)
 
 ### Tools / Documentation / Learning
 
