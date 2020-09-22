@@ -489,6 +489,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Another cool WP blog **:fr:**](https://wabeo.fr/blog/)
 - [Themeisle](https://themeisle.com)
 - [Misha Rudrastyh's blog](https://rudrastyh.com/)
+- [WPexplorer's blog](https://www.wpexplorer.com/blog/)
 
 ### Tools / Documentation / Learning
 
