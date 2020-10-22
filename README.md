@@ -348,6 +348,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Decalog - A usefull logger connectable to Slack](https://wordpress.org/plugins/decalog/)
   - [Activity Log](https://wordpress.org/plugins/aryo-activity-log/)
   - [Disable REST API](https://wordpress.org/plugins/disable-json-api/)
+  - [WP Umbrella - Monitoring a WordPress site](https://wp-umbrella.com)
 
 - **Search Engine Optimization (SEO):**
   - [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/)
@@ -363,6 +364,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Linkbuildr - automates links to the people you talk about in your article](https://wordpress.org/plugins/linkbuildr/)
   - [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
   - [WP 410 - Add 410 support](https://wordpress.org/plugins/wp-410/)
+  - [Extension Bing URL Submissions](https://wordpress.org/plugins/bing-webmaster-tools/)
 
 - **Loading optimization:**
   - [Asset CleanUp : Page Speed Booster - Manage style & script loading](https://wordpress.org/plugins/wp-asset-clean-up/)
@@ -374,6 +376,9 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [WP Admin UI - Customize WP Backoffice](https://wordpress.org/plugins/wp-admin-ui/)
   - [Contextual Adminbar Color](https://github.com/JulioPotier/contextual-adminbar-color)
   - [Customize WP Admin](https://wordpress.org/plugins/client-dash/)
+  - [Admin Columns - Edit WordPress colums table](https://wordpress.org/plugins/codepress-admin-columns/)
+  - [Adminimize - Clean the BackOffice for admins](https://wordpress.org/plugins/adminimize/)
+  - [Nested Pages - Powerfully change the page list](https://wordpress.org/plugins/wp-nested-pages/)
 
 
 - **Tools:**
@@ -381,6 +386,12 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Safe SVG](https://wordpress.org/plugins/safe-svg/)
   - [HappyFile - WP media manager](https://happyfiles.io)
   - [Sanitize Accented Uploads](https://github.com/devgeniem/wp-sanitize-accented-uploads)
+  - [User Switching - Quickly change users during development](https://wordpress.org/plugins/user-switching/)
+  - [User Role Editor - Quickly create & edit user roles](https://wordpress.org/plugins/user-role-editor/)
+  - [Stream - Real-time alter notifications](https://wordpress.org/plugins/stream/)
+  - [Simple History - Log user actions](https://wordpress.org/plugins/simple-history/)
+  - [WP Crontrol - View & control WP cron](https://wordpress.org/plugins/wp-crontrol/)
+
 
 - **Page builders**
   - [Page Builder: KingComposer – Free Drag and Drop page builder by King-Theme](https://wordpress.org/plugins/kingcomposer/)
@@ -409,6 +420,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [WP YouTube Lyte - Speed up emded YT loading !](https://wordpress.org/plugins/wp-youtube-lyte/)
   - [Change the style of WP BO](https://admintwentytwenty.com/fr)
   - [Duplicator – WordPress Migration Plugin](https://wordpress.org/plugins/duplicator/)
+  - [My Eyes Are Up Here - Improve WordPress thumbnail](https://wordpress.org/plugins/my-eyes-are-up-here/)
 
 
 &nbsp; <!-- break line -->
