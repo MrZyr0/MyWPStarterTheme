@@ -548,6 +548,8 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [All about translation :fr:](https://21douze.fr/traduction-wordpress-vous-faites-fausse-route-8518.html)
 - [Interesting A11y informations :fr:](https://wiki.lelutinduweb.fr/)
 - [Gutenberg Ramp - Control conditions under which Gutenberg loads - either from your theme code or from a UI](https://github.com/Automattic/gutenberg-ramp)
+- [Gutenberg WordPress's official components reference](https://developer.wordpress.org/block-editor/components/)
+- [Gutengerg WordPress's official packages folder in it repository](https://github.com/WordPress/gutenberg/tree/master/packages), this is the simplier way to find the right component you need
 
 ### Books
 
