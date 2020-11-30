@@ -282,6 +282,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Small CHAT - Slack on websites](https://small.chat)
 
 - **Gutemberg:**
+  - [Block navigation - a draggable navigation for the Gutenberg blocks](https://wordpress.org/plugins/block-navigation/)
   - [Coblocks](https://wordpress.org/plugins/coblocks/)
   - [Advanced Gutenberg](https://wordpress.org/plugins/advanced-gutenberg/)
   - [Advanced Gutenberg Blocks](https://wordpress.org/plugins/advanced-gutenberg-blocks/)
