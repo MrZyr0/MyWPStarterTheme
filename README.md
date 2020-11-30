@@ -485,6 +485,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Google's image optimizations article](https://developers.google.com/web/tools/lighthouse/audits/optimize-images)
 - [Talk about HTML markup](https://html.com/semantic-markup/)
 - [Sanitize accents on uploads **:fr:**](https://wpchannel.com/wordpress/tutoriels-wordpress/renommer-automatiquement-fichiers-accentues-wordpress/)
+- [Apply migration to WP database](https://gist.github.com/MrZyr0/e811d995055c72fb7e65b876100bd338)
 
 ### Blogs
 
