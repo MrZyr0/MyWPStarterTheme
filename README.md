@@ -218,7 +218,7 @@ _When there's only one plugin for a feature, it's because I've determined that i
 - [Health Check & Troubleshooting - Keep up to date independently of WP](https://wordpress.org/plugins/health-check/)
 - [WP Block Revealer - Reveal gutemberg blocs while editing](https://wordpress.org/plugins/wp-block-revealer/)
 - [Duplicate Post](https://wordpress.org/plugins/duplicate-post/)
-- [Revisionize - Edit post in draft before publish it](https://wordpress.org/plugins/revisionize/) _(Works perfectly on WP 5.5.1)_
+- ~[Revisionize - Edit post in draft before publish it](https://wordpress.org/plugins/revisionize/) _(Works perfectly on WP 5.5.1)_~ Useless since Duplicate Post does the same thing
 
 ### Development
 
