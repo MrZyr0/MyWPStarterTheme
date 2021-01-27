@@ -422,6 +422,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Change the style of WP BO](https://admintwentytwenty.com/fr)
   - [Duplicator – WordPress Migration Plugin](https://wordpress.org/plugins/duplicator/)
   - [My Eyes Are Up Here - Improve WordPress thumbnail](https://wordpress.org/plugins/my-eyes-are-up-here/)
+  - [SF Adminbar Tools - add dev tools to adminbar](https://github.com/Screenfeed/sf-adminbar-tools)
 
 
 &nbsp; <!-- break line -->
