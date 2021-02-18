@@ -407,6 +407,10 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Bicks Page Builder](https://bricksbuilder.io/)
   - [Brizy](https://www.brizy.io/)
   - [Cornerstone - Theme.co's pages builder](https://theme.co/cornerstone)
+
+
+- **Themes**
+  - [Material Design by Material Design's theme](https://wordpress.org/plugins/material-design/)
   
 - **Others:**
   - [Archived Post Status](https://wordpress.org/plugins/archived-post-status/)
