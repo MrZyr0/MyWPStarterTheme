@@ -392,6 +392,9 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Stream - Real-time alter notifications](https://wordpress.org/plugins/stream/)
   - [Simple History - Log user actions](https://wordpress.org/plugins/simple-history/)
   - [WP Crontrol - View & control WP cron](https://wordpress.org/plugins/wp-crontrol/)
+  - [Head Meta Data by Jeff Starr - Improve page meta](https://wordpress.org/plugins/head-meta-data/)
+  - [Prismatic by Jeff Starr - Syntax highlighting for your website](https://wordpress.org/plugins/prismatic/)
+  - [Theme switcha by Jeff Starr - Switch theme for only one user](https://wordpress.org/plugins/theme-switcha/)
 
 
 - **Page builders**
