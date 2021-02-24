@@ -395,6 +395,8 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Head Meta Data by Jeff Starr - Improve page meta](https://wordpress.org/plugins/head-meta-data/)
   - [Prismatic by Jeff Starr - Syntax highlighting for your website](https://wordpress.org/plugins/prismatic/)
   - [Theme switcha by Jeff Starr - Switch theme for only one user](https://wordpress.org/plugins/theme-switcha/)
+  - [WP Easy alt edit](https://github.com/creanico/wp-plugin-easy-alt-edit)
+  - [Sync editor & ACF color pickers](https://github.com/MarieComet/sync-editor-acf-color-pickers)
 
 
 - **Page builders**
