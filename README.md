@@ -350,6 +350,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [Activity Log](https://wordpress.org/plugins/aryo-activity-log/)
   - [Disable REST API](https://wordpress.org/plugins/disable-json-api/)
   - [WP Umbrella - Monitoring a WordPress site](https://wp-umbrella.com)
+  - [Crowdsec](https://wordpress.org/plugins/crowdsec/)
 
 - **Search Engine Optimization (SEO):**
   - [All in One SEO Pack](https://wordpress.org/plugins/all-in-one-seo-pack/)
