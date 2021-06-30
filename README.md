@@ -453,6 +453,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Alternate repo for WP plugins](https://github.com/imath/entrepot)
 - [Next JS WP Starter theme](https://github.com/WebDevStudios/nextjs-wordpress-starter)
 - [Bzk = WP Starter Theme](https://gitlab.com/bazooka/bzk)
+- [Neptun - Starter Theme](https://neptune-green.tech/)
 
 ### Tutorials / Articles
 
