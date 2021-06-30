@@ -454,6 +454,8 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Next JS WP Starter theme](https://github.com/WebDevStudios/nextjs-wordpress-starter)
 - [Bzk = WP Starter Theme](https://gitlab.com/bazooka/bzk)
 - [Neptun - Starter Theme](https://neptune-green.tech/)
+- [wp.org code analysis](https://github.com/WordPress/wporg-code-analysis)
+- [WP CSS audit](https://github.com/wordpress/css-audit)
 
 ### Tutorials / Articles
 
@@ -500,6 +502,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Talk about HTML markup](https://html.com/semantic-markup/)
 - [Sanitize accents on uploads **:fr:**](https://wpchannel.com/wordpress/tutoriels-wordpress/renommer-automatiquement-fichiers-accentues-wordpress/)
 - [Apply migration to WP database](https://gist.github.com/MrZyr0/e811d995055c72fb7e65b876100bd338)
+- [Tailwind guides in WordPress](https://www.youtube.com/watch?v=zJdySrlMr5A)
 
 ### Blogs
 
