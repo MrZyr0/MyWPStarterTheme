@@ -452,6 +452,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [wp.org plugins](https://profiles.wordpress.org/wordpressdotorg/#content-plugins)
 - [Alternate repo for WP plugins](https://github.com/imath/entrepot)
 - [Next JS WP Starter theme](https://github.com/WebDevStudios/nextjs-wordpress-starter)
+- [Bzk = WP Starter Theme](https://gitlab.com/bazooka/bzk)
 
 ### Tutorials / Articles
 
