@@ -450,6 +450,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 - [Example of good website powered by WordPress](https://docs.google.com/spreadsheets/d/1BNH4LRCS0TRykjOKjN9k8NOw0PM_RnzxWTBe9W_FUZQ/edit#gid=0)
 - [wp.org plugins](https://profiles.wordpress.org/wordpressdotorg/#content-plugins)
 - [Alternate repo for WP plugins](https://github.com/imath/entrepot)
+- [Next JS WP Starter theme](https://github.com/WebDevStudios/nextjs-wordpress-starter)
 
 ### Tutorials / Articles
 
