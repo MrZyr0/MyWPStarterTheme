@@ -528,6 +528,7 @@ Here are some interesting sources and documentations that can help or inspire fo
 ### Tools / Documentation / Learning
 
 - [START HERE: WordPress configuration to dev theme](https://developer.wordpress.org/themes/basics/theme-functions/)
+- [WP patch notes versions](https://make.wordpress.org/core/2021/06/25/introducing-theme-json-in-wordpress-5-8/)
 - [WP Glossary](https://www.wpglossary.net/)
 - [Admin interface element presentation](https://wpadmin.bracketspace.com/)
 - [Web dev checklist](http://webdevchecklist.com/)
