@@ -319,6 +319,7 @@ Here is mutiple plugins & tools, that could be implemented, for one usage that I
   - [WP Optimize](https://wordpress.org/plugins/wp-optimize/) _=> usefull for automation ?_
   - [Shortcode Cleaner Lite](https://wordpress.org/plugins/shortcode-cleaner-lite/)
   - [Plugins Garbage Collector (Database Cleanup)](https://wordpress.org/plugins/plugins-garbage-collector/)
+  - [Transient Cleaner](https://wordpress.org/plugins/artiss-transient-cleaner/)
 
 - **Generating "legal notice":**
   - <https://www.subdelirium.com/generateur-de-mentions-legales/> **:fr:**
