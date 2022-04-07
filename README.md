@@ -573,6 +573,7 @@ _use it to check security of plugins before install it (search "ajax_no_priv")_
 - [Gutenberg WordPress's official components reference](https://developer.wordpress.org/block-editor/components/)
 - [Gutengerg WordPress's official packages folder in it repository](https://github.com/WordPress/gutenberg/tree/master/packages), this is the simplier way to find the right component you need
 - [WP Documentation style guide](https://github.com/WordPress/WordPress-Documentation-Style-Guide)
+- [SweepPress](https://fr.wordpress.org/plugins/sweeppress/)
 
 ### Books
 
