@@ -1,19 +1,23 @@
-const gulp = require('gulp');
-const gulp_include = require('gulp-include'); // include
-const gulp_cache = require('gulp-cache'); // Cache image optimizations
-const gulp_sass = require('gulp-sass'); // Sass compilation
-const gulp_cleanCSS = require('gulp-clean-css'); // Optimize CSS
-const gulp_sass_glob = require('gulp-sass-glob'); // Glob sass (support * import)
-const gulp_prefixer = require('gulp-autoprefixer'); // Prefix CSS for compatibilities issues
-// const gulp_uglify = require('gulp-uglify'); // Optimize JS (not support ES6 ! Need to use TerserPlugin TODO: replace gulp by webpack)
-const gulp_imagemin = require('gulp-imagemin'); // Optimize .gif .png .svg images
-const imageminJpegoptim = require('imagemin-jpegoptim'); // Optimize .jpg & .jpeg images
-const imageminMozjpeg = require('imagemin-mozjpeg'); // Optimize .jpg & .jpeg images
-const browserSync = require('browser-sync').create(); // Sync multiple browsers & auto refresh naviguator on save
-const del = require('del'); // Delete files before optimizations
+import gulp from 'gulp'
+import gulp_include from 'gulp-include' // include
+import gulp_cache from 'gulp-cache' // Cache image optimizations
+import gulp_sass from 'gulp-sass' // Sass compilation
+import gulp_cleanCSS from 'gulp-clean-css' // Optimize CSS
+import gulp_sass_glob from 'gulp-sass-glob' // Glob sass (support * import)
+import gulp_prefixer from 'gulp-autoprefixer' // Prefix CSS for compatibilities issues
+// import gulp_uglify from 'gulp-uglify'; // Optimize JS (not support ES6 ! Need to use TerserPlugin TODO: replace gulp by webpack)
+import gulp_imagemin from 'gulp-imagemin'; // Optimize .gif .png .svg images
+import imageminJpegoptim from 'imagemin-jpegoptim'; // Optimize .jpg & .jpeg images
+import imageminMozjpeg from 'imagemin-mozjpeg'; // Optimize .jpg & .jpeg images
+import browserSyncMod from 'browser-sync' // Sync multiple browsers & auto refresh naviguator on save
+import { deleteAsync } from 'del'; // Delete files before optimizations
+import * as dartSass from 'sass';
 
-const browserLink = 'http://localhost:10004/';
-const browserPort = 3030;
+const sass = gulp_sass(dartSass);
+const browserSync = browserSyncMod.create();
+
+const browserLink = 'http://wordpress.local/';
+const browserPort = 80;
 const srcFolder = './_src';
 const publicFolder = '.';
 
@@ -31,8 +35,8 @@ const publicAssetsFolder = publicFolder + '/assets';
 const publicImagesFolder = publicAssetsFolder + '/imgs';
 const publicFontsFolder = publicAssetsFolder + '/fonts';
 
-function clean() {
-	return del([
+export function clean() {
+	return deleteAsync([
 		publicStyleFolder + '*.css',
 		publicScriptFolder,
 		publicPagesFolder + '*.php',
@@ -52,7 +56,7 @@ function styleDev() {
 		.src(sassCompileFiles)
 		.pipe(gulp_include())
 		.pipe(gulp_sass_glob())
-		.pipe(gulp_sass())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp_prefixer('last 2 versions')) // list of targeted browsers => https://browserl.ist/?q=last+2+versions
 		.pipe(gulp.dest(publicStyleFolder));
 }
@@ -81,10 +85,10 @@ function imgsDev() {
 		.pipe(
 			gulp_cache(
 				gulp_imagemin([
-					gulp_imagemin.gifsicle({
-						interlaced: true,
-						optimizationLevel: 1
-					}),
+					// gulp_imagemin.gifsicle({
+					// 	interlaced: true,
+					// 	optimizationLevel: 1
+					// }),
 
 					imageminJpegoptim({
 						progressive: true,
@@ -95,18 +99,18 @@ function imgsDev() {
 						quality: 85
 					}),
 
-					gulp_imagemin.optipng({
-						interlaced: true,
-						optimizationLevel: 0
-					}),
+					// gulp_imagemin.optipng({
+					// 	interlaced: true,
+					// 	optimizationLevel: 0
+					// }),
 
-					gulp_imagemin.svgo({
-						plugins: [
-							{
-								sortAttrs: true
-							}
-						]
-					})
+					// gulp_imagemin.svgo({
+					// 	plugins: [
+					// 		{
+					// 			sortAttrs: true
+					// 		}
+					// 	]
+					// })
 				])
 			)
 		)
@@ -130,7 +134,7 @@ function styleProd() {
 		.src(sassCompileFiles)
 		.pipe(gulp_include())
 		.pipe(gulp_sass_glob())
-		.pipe(gulp_sass())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp_prefixer('last 2 versions')) // list of targeted browsers => https://browserl.ist/?q=last+2+versions
 		.pipe(gulp_cleanCSS())
 		.pipe(gulp.dest(publicStyleFolder));
@@ -224,9 +228,9 @@ function browserSyncServer(done) {
 	done();
 }
 
-exports.default = gulp.series(clean, devBuild, browserSyncServer);
-exports.work = exports.default;
 
-exports.build = gulp.series(clean, prodBuild);
+export default gulp.series(clean, devBuild, browserSyncServer);
 
-exports.clean = clean;
+export const work = gulp.series(clean, devBuild, browserSyncServer);
+
+export const build = gulp.series(clean, prodBuild);

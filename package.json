@@ -3,6 +3,10 @@
 	"version": "3.1.0",
 	"description": "An optimised gulp configuration for WordPress website developpement",
 	"main": "gulpfile.js",
+	"type": "module",
+	"scripts": {
+		"gulp": "gulp"
+	},
 	"dependencies": {
 		"browser-sync": "^3.0.2",
 		"del": "^7.1.0",
@@ -18,7 +22,8 @@
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-uglify": "^3.0.2",
 		"imagemin-jpegoptim": "^8.0.0",
-		"imagemin-mozjpeg": "^10.0.0"
+		"imagemin-mozjpeg": "^10.0.0",
+		"sass": "^1.77.8"
 	},
 	"repository": {
 		"type": "git",
