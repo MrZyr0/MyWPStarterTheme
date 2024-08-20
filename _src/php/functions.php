@@ -37,4 +37,4 @@ require_once get_template_directory() . '/inc/functions-parts/customizer.php';
 require_once get_template_directory() . '/inc/functions-parts/class-mywpstartertheme-cleanup-menu-walker.php';
 
 
-require_once get_template_directory() . '/inc/functions-parts/class-mywpstartertheme-add-first-element-walker.php';
+// require_once get_template_directory() . '/inc/functions-parts/class-mywpstartertheme-add-first-element-walker.php';
